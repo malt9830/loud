@@ -10,9 +10,9 @@ get_header();
 
 ?>
 <template>
-	<article class="article">
-		<img class="ret_billede" src="" alt="">
-		<div class="text_indhold">
+	<article class="pod_article">
+		<img class="pod_billede" src="" alt="">
+		<div class="pod_indhold">
 			<h2></h2>
 			<p class="kort_info"></p>
 		</div>
@@ -20,12 +20,26 @@ get_header();
 </template>
 
 <section>
-	<main>
+	<main class="pod_main">
+		<div class="popu_podcast"></div>
+		<div class="kategorier">
+			<h2>Kategorier</h2>
+			<button type="button">Alle</button>
+			<button type="button">True crime</button>
+			<button type="button">Samfund/ Kultur</button>
+			<button type="button">Nyheder/ Politik</button>
+			<button type="button">Musik</button>
+			<button type="button">Komedie</button>
+			<button type="button">Bsuiness</button>
+			<button type="button">Livsstil</button>
+			<button type="button">Kig indad</button>
+			<button type="button">Kunst</button>
 
+		</div>
 	</main>
 
 	<script>
-		const url = "https://malthekusk.one/kea/loud/wordpress/wp-json/wp/v2/podcast?per_page=100"
+		const url = "https://malthekusk.one/kea/loud/wordpress/wp-json/wp/v2/podcast?per_page=8"
 
 		async function getJson() {
 			const data = await fetch(url);
@@ -37,14 +51,22 @@ get_header();
 
 		function visPodcasts() {
 			let template = document.querySelector("template");
-			let container = document.querySelector("main");
+			let container = document.querySelector(".popu_podcast");
+
 			podcasts.forEach(podcast => {
 				let klon = template.cloneNode(true).content;
+
+				//				let stream = podcast.streaming
+				//				stream.sort(function(a, b) {
+				//					return b - a;
+				//				});
 
 				klon.querySelector("img").src = podcast.billede.guid;
 				klon.querySelector("div h2").textContent = podcast.title.rendered;
 				klon.querySelector("div .kort_info").textContent = podcast.kort;
-
+				klon.querySelector(".pod_article").addEventListener("click", () => {
+					location.href = podcast.link;
+				});
 				container.appendChild(klon);
 
 			});
