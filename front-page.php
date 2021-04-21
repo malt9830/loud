@@ -94,7 +94,7 @@ get_header();
 
     @media (min-width: 650px) {
         #section-feed .container-feed {
-            grid-template-columns: repeat(2, 1fr),
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 
@@ -414,7 +414,11 @@ get_header();
 
             /*--------------placeholder for partnere podcast-----------*/
 
-            rngCasts.forEach(podcast => {
+            const partner1 = [rng1, rng1, rng1];
+            const partner2 = [rng2, rng2, rng2];
+            const partner3 = [rng3, rng3, rng3];
+
+            partner1.forEach(podcast => {
                 console.log("looping");
                 //Her definerers konstanter til senere brug i kloningen af template
                 const template = document.querySelector("template");
@@ -432,7 +436,7 @@ get_header();
                 container.appendChild(clone); //Klonerne tilføres til DOM
 
             })
-            rngCasts.forEach(podcast => {
+            partner2.forEach(podcast => {
                 console.log("looping");
                 //Her definerers konstanter til senere brug i kloningen af template
                 const template = document.querySelector("template");
@@ -450,7 +454,7 @@ get_header();
                 container.appendChild(clone); //Klonerne tilføres til DOM
 
             })
-            rngCasts.forEach(podcast => {
+            partner3.forEach(podcast => {
                 console.log("looping");
                 //Her definerers konstanter til senere brug i kloningen af template
                 const template = document.querySelector("template");
