@@ -25,7 +25,7 @@ get_header();
 		const url = "https://malthekusk.one/kea/loud/wordpress/wp-json/wp/v2/podcast?per_page=100"
 
 		async function getJson() {
-			const data = await fetch(dbUrl);
+			const data = await fetch(url);
 			podcasts = await data.json();
 			console.log("podcasts", retter);
 			// visPodcasts();
