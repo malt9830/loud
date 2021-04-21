@@ -8,21 +8,22 @@
 
 get_header();
 
-	 <template>
-		<article class="article">
-			<img class="ret_billede" src="" alt="">
-			<div class="text_indhold">
-				<h2></h2>
-				<p class="kort_info"></p>
-				<p class="pris"></p>
-			</div>
-		</article>
-	</template>
+?>
+<template>
+	<article class="article">
+		<img class="ret_billede" src="" alt="">
+		<div class="text_indhold">
+			<h2></h2>
+			<p class="kort_info"></p>
+			<p class="pris"></p>
+		</div>
+	</article>
+</template>
 
- <section>
-	 <main>
+<section>
+	<main>
 
-		 </main>
+	</main>
 
 	<script>
 		const url = "https://malthekusk.one/kea/loud/wordpress/wp-json/wp/v2/podcast?per_page=100"
@@ -41,23 +42,24 @@ get_header();
 
 
 			podcasts.forEach(podcast => {
-					let klon = template.cloneNode(true);
+				let klon = template.cloneNode(true);
 
-					klon.querySelector("img").src = medieurl + ret.billede;
-					klon.querySelector("img").alt = ret.navn;
-					klon.querySelector("div h2").textContent = ret.navn;
-					klon.querySelector("div .kort_info").textContent = ret.kortbeskrivelse;
-					klon.querySelector("div .pris").textContent = `Pris: ${ret.pris} kr.`;
-					main.appendChild(klon);
+				klon.querySelector("img").src = podcast.billede;
+				klon.querySelector("img").alt = podcast.navn;
+				klon.querySelector("div h2").textContent = podcast.navn;
+				klon.querySelector("div .kort_info").textContent = podcast.kortbeskrivelse;
+				klon.querySelector("div .pris").textContent = `Pris: ${podcast.pris} kr.`;
+				container.appendChild(klon);
 
-				}
-			);
+			});
 		}
 
 	</script>
 
 
-	 </section>
+</section>
+
+<?php
 
 get_template_part( 'template-parts/footer/player' );
 get_footer();
