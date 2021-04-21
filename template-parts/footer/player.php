@@ -1,3 +1,3 @@
 <div class="bottom-player">
-    <h3>bottom-player</h3>
+    <h4>bottom-player</h4>
 </div>
