@@ -324,7 +324,9 @@ get_header();
         <h2>Udvalgte podcasts</h2>
         <div class="container"></div>
     </section>
-    <section id="section-infographic"></section>
+    <section id="section-infographic">
+        <h2>Infographic</h2>
+    </section>
     <section id="section-partners">
         <h2>LOUD-partnere</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia ultricies sapien nec dapibus. Morbi non nisl ac mi pretium tempor. Nam porta est nec urna sodales porttitor. Ut porttitor congue urna sed efficitur. Nullam vitae nunc quis lectus mollis accumsan. Nulla bibendum lectus tempor, interdum sapien at, consectetur leo. Maecenas sit amet justo mauris.</p>
