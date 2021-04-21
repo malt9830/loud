@@ -23,7 +23,10 @@ get_header();
         <div id="section-feed">
 
         </div>
-        <div id="section-podcasts"></div>
+        <div id="section-podcasts">
+            <h2>Udvalgte podcasts</h2>
+            <div class="container"></div>
+        </div>
         <div id="section-infographic"></div>
         <div id="section-partners"></div>
 
@@ -34,7 +37,7 @@ get_header();
             <div class="top">
                 <img class="image">
                 <div class="text">
-                    <h3></h3>
+                    <h2></h2>
                     <p></p>
                 </div>
             </div>
@@ -53,94 +56,51 @@ get_header();
         let podcast;
 
         //Her defineres konstanter til senere brug for fetch af json
-        const url = "http://malthekusk.one/kea/passion/wordpress/wp-json/wp/v2/artwork?per_page=100";
+        const url = "http://malthekusk.one/kea/loud/wordpress/wp-json/wp/v2/podcast?per_page=100";
 
-        // Her hentes json ind fra restdb, og sendes vider til funktionen showArt
+        // Her hentes json ind fra restdb, og sendes vider til funktionen showPodcasts
         async function loadJSON() {
             //Henter json og gemmer det som art
             const JSONData = await fetch(url);
-            otherArt = await JSONData.json();
-            showOtherArt();
+            podcasts = await JSONData.json();
+            showPodcasts();
         }
 
-        // I funktionen showArt, sættes hvert enkelt kunstværk ind i HTML
-        function showOtherArt() {
-            console.log("showingArt");
-            console.log(art);
-            const other1 = otherArt[Math.floor(Math.random() * otherArt.length)];
-            const other2 = otherArt[Math.floor(Math.random() * otherArt.length)];
-            const other3 = otherArt[Math.floor(Math.random() * otherArt.length)];
-            const randomArt = [other1, other2, other3];
-            console.log(randomArt);
+        // I funktionen showPodcasts, sættes hvert enkelt kunstværk ind i HTML
+        function showPodcasts() {
+            console.log("showingPodcasts");
+            console.log(podcasts);
+            const rng1 = podcasts[Math.floor(Math.random() * podcasts.length)];
+            const rng2 = podcasts[Math.floor(Math.random() * podcasts.length)];
+            const rng3 = podcasts[Math.floor(Math.random() * podcasts.length)];
+            const rngCasts = [rng1, rng2, rng3];
+            console.log(rngCasts);
 
             //Her definerers konstanter til senere brug i kloningen af template
             const template = document.querySelector("template");
-            const container = document.querySelector("#galleri");
-            container.innerHTML = "";
+            const container = document.querySelector(".container");
 
             /*  container.textContent = " ";*/ // HTML containeren tømmes for eksisterende indhold, og kan nu få tilført nyt indhold.
 
-            randomArt.forEach(randomArtwork => {
+            rngCasts.forEach(podcast => {
                 console.log("looping");
 
                 let clone = template.cloneNode(true).content; //Her klones template og udfyldes  med data fra json
 
-                clone.querySelector("img").src = randomArtwork.image.guid;
-                clone.querySelector("img").alt = randomArtwork.short;
-                clone.querySelector("h2").textContent = randomArtwork.work;
-                clone.querySelector("h3").textContent = `Af ${randomArtwork.artist}`;
-                clone.querySelector("p").textContent = randomArtwork.short;
+                clone.querySelector("img").src = podcast.billede.guid;
+                clone.querySelector("img").alt = podcast.kort;
+                clone.querySelector("h2").textContent = podcast.title.rendered;
+                clone.querySelector("p").textContent = podcast.kort;
                 clone.querySelector("article").addEventListener("click", () => {
-                    location.href = randomArtwork.link;
+                    location.href = podcast.link;
                 });
-                container.appendChild(clone); //kolene tilføres til DOM
+                container.appendChild(clone); //Klonerne tilføres til DOM
 
             })
         }
 
     </script>
 </div><!-- #primary -->
-<div class="footer-nav-widgets-wrapper header-footer-group">
-    <div class="footer-inner section-inner">
-        <aside class="footer-widgets-outer-wrapper" role="complementary">
-            <div class="footer-widgets-wrapper">
-                <div class="footer-widgets column-one grid-item">
-                    <div class="widget_text widget widget_custom_html">
-                        <div class="widget_text widget-content">
-                            <div class="textwidget custom-html-widget">
-                                <div class="footer-flex">
-                                    <div class="footer-left">
-                                        <h4>Kontakt os</h4>
-                                        <p>
-                                            VNDU
-                                        </p>
-                                        <p>Telefon: <a>+45 20 18 88 77</a></p>
-                                        <p>
-                                            E-mail: <a>hello@vndu.dk</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-widgets column-two grid-item">
-                    <div class="widget_text widget widget_custom_html">
-                        <div class="widget_text widget-content">
-                            <div class="textwidget custom-html-widget">
-                                <div class="footer-right">
-                                    <i class="fab fa-instagram"></i>
-                                    <i class="fab fa-linkedin-in"></i>
-                                    <i class="fab fa-facebook-square"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- .footer-widgets-wrapper -->
-        </aside><!-- .footer-widgets-outer-wrapper -->
-    </div><!-- .footer-inner -->
-</div>
 
 <?php
 /* Start the Loop */
