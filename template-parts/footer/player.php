@@ -7,13 +7,13 @@
         bottom: 0;
         background: white;
         width: 100%;
-        padding: 1rem;
+        padding: 0;
         text-align: left;
     }
 
     .bottom-player-box {
         display: inline-block;
-        margin: 1rem;
+        margin: 0.5rem;
     }
 
     .bottom-player-left {
@@ -26,18 +26,13 @@
         grid-gap: 0.5rem;
     }
 
-    .bottom-player-image {
-        display: inline-block;
-    }
-
     .bottom-player-text {
         display: none;
     }
 
     .bottom-player-image {
-        min-width: 4rem;
-        max-width: 6rem;
-        width: 100%;
+        display: inline-block;
+        width: 3rem;
     }
 
     .bottom-player-image img {
@@ -46,11 +41,11 @@
 
     .bottom-player-left h5 {
         font-family: 'Montserrat', sans-serif;
-        font-size: 1.7rem;
+        font-size: 1.3rem;
     }
 
     .bottom-player-left p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .bottom-player-middle {
@@ -64,7 +59,7 @@
 
     .bottom-player .fas,
     .bottom-player .far {
-        font-size: 3rem;
+        font-size: 2rem;
         align-self: center;
         color: #1A202C;
     }
@@ -75,7 +70,7 @@
 
     .bottom-player .bar-container {
         position: relative;
-        height: 2rem;
+        height: 1rem;
         border-radius: 1rem;
     }
 
@@ -100,9 +95,31 @@
         display: none;
     }
 
+    .bottom-player .bar-display {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 0.3rem;
+    }
+
+    .bottom-player .bar-text {
+        font-size: 0.7rem;
+    }
+
     @media (min-width: 1000px) {
+        .bottom-player {
+            padding: 0 1.5rem;
+        }
+
+        .bottom-player-box {
+            margin: 1rem;
+        }
+
         .bottom-player-text {
             display: inline-block;
+        }
+
+        .bottom-player-image {
+            width: 5rem;
         }
 
         .bottom-player .player-timer {
@@ -113,6 +130,11 @@
             display: inline-block;
         }
 
+        .bottom-player .fas,
+        .bottom-player .far {
+            font-size: 3rem;
+        }
+
         .bottom-player-left {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -120,13 +142,25 @@
         }
 
         .bottom-player-middle {
-            grid-template-columns: 1fr 1fr 7fr 1fr;
+            grid-template-columns: 1fr 1fr 11fr 1fr;
         }
 
         .bottom-player-right {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-gap: 0.5rem;
+            grid-gap: 1.3rem;
+        }
+
+        .bottom-player .bar-container {
+            height: 2rem;
+        }
+
+        .bottom-player .bar-display {
+            grid-template-rows: 1fr;
+        }
+
+        .bottom-player .bar-text {
+            display: none;
         }
     }
 
@@ -147,9 +181,12 @@
             <i class="far fa-play-circle"></i>
         </div>
         <p class="player-timer">20:31</p>
-        <div class="bar-container">
-            <div class="full-bar"></div>
-            <div class="half-bar"></div>
+        <div class="bar-display">
+            <p class="bar-text">LIGE NU: Spejlet med Liva Manghezi</p>
+            <div class="bar-container">
+                <div class="full-bar"></div>
+                <div class="half-bar"></div>
+            </div>
         </div>
         <p class="player-timer">14:25</p>
     </div>

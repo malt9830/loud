@@ -13,7 +13,16 @@ $show_title   = ( true === get_theme_mod( 'display_title_and_tagline', true ) );
 $header_class = $show_title ? 'site-title' : 'screen-reader-text';
 
 ?>
+<style>
+    .site-branding {
+        margin: 0 !important;
+    }
 
+    .site-logo {
+        margin: 1rem;
+    }
+
+</style>
 <div class="site-branding">
     <div class="site-logo"><?php the_custom_logo(); ?></div>
 </div><!-- .site-branding -->
