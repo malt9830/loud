@@ -15,7 +15,6 @@ get_header();
 		<div class="text_indhold">
 			<h2></h2>
 			<p class="kort_info"></p>
-			<p class="pris"></p>
 		</div>
 	</article>
 </template>
@@ -31,28 +30,27 @@ get_header();
 		async function getJson() {
 			const data = await fetch(url);
 			podcasts = await data.json();
-			console.log("podcasts", retter);
-			// visPodcasts();
+			console.log(podcasts);
+			visPodcasts();
 		}
 
 
 		function visPodcasts() {
 			let template = document.querySelector("template");
 			let container = document.querySelector("main");
-
-
 			podcasts.forEach(podcast => {
-				let klon = template.cloneNode(true);
+				let klon = template.cloneNode(true).content;
 
-				klon.querySelector("img").src = podcast.billede;
-				klon.querySelector("img").alt = podcast.navn;
-				klon.querySelector("div h2").textContent = podcast.navn;
-				klon.querySelector("div .kort_info").textContent = podcast.kortbeskrivelse;
-				klon.querySelector("div .pris").textContent = `Pris: ${podcast.pris} kr.`;
+				klon.querySelector("img").src = podcast.billede.guid;
+				klon.querySelector("div h2").textContent = podcast.title.rendered;
+				klon.querySelector("div .kort_info").textContent = podcast.kort;
+
 				container.appendChild(klon);
 
 			});
 		}
+
+		getJson();
 
 	</script>
 
