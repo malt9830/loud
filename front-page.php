@@ -132,10 +132,17 @@ get_header();
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        cursor: pointer;
+    }
+
+    article .top {
+        display: grid;
+        grid-template-columns: 2fr 5fr;
+        grid-gap: 0.5rem;
     }
 
     article .top .text h3 {
-        margin-top: 1rem;
+        margin: 0;
     }
 
     article .top .text p {
@@ -144,14 +151,41 @@ get_header();
     }
 
     article .play-button {
-        font-size: 1.7rem;
+        font-size: 1.3rem;
     }
 
     article .play-button p {
         display: inline-block;
     }
 
-    /*------------podcasts------------*/
+    @media (min-width: 650px) {
+
+        article .top {
+            grid-template-columns: 1fr;
+        }
+
+        article .top .text h3 {
+            margin-top: 1rem;
+        }
+    }
+
+    @media (max-width: 650px) {
+
+        article .top .text h3 {
+            font-size: 1.1rem;
+        }
+
+        article .top .text p {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        article .play-button {
+            text-align: center;
+        }
+    }
+
+    /*------------partners------------*/
 
     #section-partners p {
         margin-bottom: 2rem;
@@ -418,59 +452,64 @@ get_header();
             const partner2 = [rng2, rng2, rng2];
             const partner3 = [rng3, rng3, rng3];
 
-            partner1.forEach(podcast => {
-                console.log("looping");
+            podcasts.forEach(podcast => {
+                console.log("looping ROS-podcasts");
                 //Her definerers konstanter til senere brug i kloningen af template
                 const template = document.querySelector("template");
                 const container = document.querySelector("#partner-ros .container");
 
-                let clone = template.cloneNode(true).content; //Her klones template og udfyldes med data fra json
+                if (podcast.partner == "ros") {
+                    let clone = template.cloneNode(true).content; //Her klones template og udfyldes med data fra json
 
-                clone.querySelector("img").src = podcast.billede.guid;
-                clone.querySelector("img").alt = podcast.kort;
-                clone.querySelector("h3").textContent = podcast.title.rendered;
-                clone.querySelector("p").textContent = podcast.kort;
-                clone.querySelector("article").addEventListener("click", () => {
-                    location.href = podcast.link;
-                });
-                container.appendChild(clone); //Klonerne tilføres til DOM
-
+                    clone.querySelector("img").src = podcast.billede.guid;
+                    clone.querySelector("img").alt = podcast.kort;
+                    clone.querySelector("h3").textContent = podcast.title.rendered;
+                    clone.querySelector("p").textContent = podcast.kort;
+                    clone.querySelector("article").addEventListener("click", () => {
+                        location.href = podcast.link;
+                    });
+                    container.appendChild(clone); //Klonerne tilføres til DOM}
+                }
             })
-            partner2.forEach(podcast => {
-                console.log("looping");
+
+            podcasts.forEach(podcast => {
+                console.log("looping VEGA-podcasts");
                 //Her definerers konstanter til senere brug i kloningen af template
                 const template = document.querySelector("template");
                 const container = document.querySelector("#partner-vega .container");
 
-                let clone = template.cloneNode(true).content; //Her klones template og udfyldes med data fra json
+                if (podcast.partner == "vega") {
+                    let clone = template.cloneNode(true).content; //Her klones template og udfyldes med data fra json
 
-                clone.querySelector("img").src = podcast.billede.guid;
-                clone.querySelector("img").alt = podcast.kort;
-                clone.querySelector("h3").textContent = podcast.title.rendered;
-                clone.querySelector("p").textContent = podcast.kort;
-                clone.querySelector("article").addEventListener("click", () => {
-                    location.href = podcast.link;
-                });
-                container.appendChild(clone); //Klonerne tilføres til DOM
-
+                    clone.querySelector("img").src = podcast.billede.guid;
+                    clone.querySelector("img").alt = podcast.kort;
+                    clone.querySelector("h3").textContent = podcast.title.rendered;
+                    clone.querySelector("p").textContent = podcast.kort;
+                    clone.querySelector("article").addEventListener("click", () => {
+                        location.href = podcast.link;
+                    });
+                    container.appendChild(clone); //Klonerne tilføres til DOM
+                }
             })
-            partner3.forEach(podcast => {
-                console.log("looping");
+
+            podcasts.forEach(podcast => {
+                console.log("looping Nationalmuseet-podcasts");
                 //Her definerers konstanter til senere brug i kloningen af template
                 const template = document.querySelector("template");
                 const container = document.querySelector("#partner-natmus .container");
 
-                let clone = template.cloneNode(true).content; //Her klones template og udfyldes med data fra json
+                if (podcast.partner == "natmus") {
+                    let clone = template.cloneNode(true).content; //Her klones template og udfyldes med data fra json
 
-                clone.querySelector("img").src = podcast.billede.guid;
-                clone.querySelector("img").alt = podcast.kort;
-                clone.querySelector("h3").textContent = podcast.title.rendered;
-                clone.querySelector("p").textContent = podcast.kort;
-                clone.querySelector("article").addEventListener("click", () => {
-                    location.href = podcast.link;
-                });
-                container.appendChild(clone); //Klonerne tilføres til DOM
-
+                    clone.querySelector("img").src = podcast.billede.guid;
+                    clone.querySelector("img").alt = podcast.kort;
+                    clone.querySelector("h3").textContent = podcast.title.rendered;
+                    clone.querySelector("p").textContent = podcast.kort;
+                    clone.querySelector("article").addEventListener("click", () => {
+                        location.href = podcast.link;
+                    });
+                    container.appendChild(clone); //Klonerne tilføres til DOM
+                }
             })
         }
 
