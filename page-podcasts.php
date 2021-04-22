@@ -9,6 +9,56 @@
 get_header();
 
 ?>
+<style>
+	* {
+		margin: 0;
+		box-sizing: border-box;
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	h2 {
+		font-size: 19px;
+	}
+
+	p {
+		font-size: 16px;
+	}
+
+	img {
+		width: 100%;
+		vertical-align: middle;
+	}
+
+	.popu_podcast {
+		display: flex;
+		gap: 20px;
+		padding: 20px;
+	}
+
+	.pod_article {
+		flex-grow: 1;
+	}
+
+	@media (max-width: 600px) {
+
+		.popu_podcast {
+			overflow-x: scroll;
+			scroll-snap-type: x mandatory;
+		}
+
+		.pod_article {
+			flex-basis: 90%;
+			flex-shrink: 0;
+			scroll-snap-align: center;
+		}
+
+		.popu_podcast img {
+			margin-right: 20px;
+		}
+	}
+
+</style>
+
 <template>
 	<article class="pod_article">
 		<img class="pod_billede" src="" alt="">
@@ -62,8 +112,8 @@ get_header();
 				//				});
 
 				klon.querySelector("img").src = podcast.billede.guid;
-				klon.querySelector("div h2").textContent = podcast.title.rendered;
-				klon.querySelector("div .kort_info").textContent = podcast.kort;
+				klon.querySelector("div h2").innerHTML = podcast.title.rendered;
+				klon.querySelector("div .kort_info").innerHTML = podcast.kort;
 				klon.querySelector(".pod_article").addEventListener("click", () => {
 					location.href = podcast.link;
 				});
