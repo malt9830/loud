@@ -66,6 +66,7 @@
         font-size: 2rem;
         align-self: center;
         color: #1A202C;
+        vertical-align: middle;
     }
 
     .bottom-player .fa-list {
@@ -199,7 +200,7 @@
     }
 
 </style>
-<div class="bottom-player">
+<div class="bottom-player" draggable="true">
     <div class="bottom-player-drag">
         <i class="fas fa-chevron-up"></i>
     </div>
