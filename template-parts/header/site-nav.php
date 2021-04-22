@@ -10,18 +10,45 @@
 ?>
 
 <?php if ( has_nav_menu( 'primary' ) ) : ?>
-	<nav id="site-navigation" class="primary-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary menu', 'twentytwentyone' ); ?>">
-		<div class="menu-button-container">
-			<button id="primary-mobile-menu" class="button" aria-controls="primary-menu-list" aria-expanded="false">
-				<span class="dropdown-icon open"><?php esc_html_e( 'Menu', 'twentytwentyone' ); ?>
-					<?php echo twenty_twenty_one_get_icon_svg( 'ui', 'menu' ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
-				</span>
-				<span class="dropdown-icon close"><?php esc_html_e( 'Close', 'twentytwentyone' ); ?>
-					<?php echo twenty_twenty_one_get_icon_svg( 'ui', 'close' ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
-				</span>
-			</button><!-- #primary-mobile-menu -->
-		</div><!-- .menu-button-container -->
-		<?php
+<style>
+    #primary-mobile-menu {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .dropdown-icon {
+        color: white;
+    }
+
+    .open {
+        margin: 1rem;
+    }
+
+    .open svg {
+        width: 5rem;
+        height: 5rem;
+        color: white;
+    }
+
+    .menu-button-container {
+        padding-bottom: 0;
+    }
+
+    .site-navigation {}
+
+</style>
+<nav id="site-navigation" class="primary-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary menu', 'twentytwentyone' ); ?>">
+    <div class="menu-button-container">
+        <button id="primary-mobile-menu" class="button" aria-controls="primary-menu-list" aria-expanded="false">
+            <span class="dropdown-icon open">
+                <?php echo twenty_twenty_one_get_icon_svg( 'ui', 'menu' ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
+            </span>
+            <span class="dropdown-icon close"><?php esc_html_e( 'Close', 'twentytwentyone' ); ?>
+                <?php echo twenty_twenty_one_get_icon_svg( 'ui', 'close' ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
+            </span>
+        </button><!-- #primary-mobile-menu -->
+    </div><!-- .menu-button-container -->
+    <?php
 		wp_nav_menu(
 			array(
 				'theme_location'  => 'primary',
@@ -32,5 +59,5 @@
 			)
 		);
 		?>
-	</nav><!-- #site-navigation -->
+</nav><!-- #site-navigation -->
 <?php endif; ?>
