@@ -6,6 +6,7 @@
         width: 100%;
         padding: 0;
         margin: 0;
+        cursor: pointer;
     }
 
     .bottom-player-content {
@@ -246,28 +247,30 @@
         console.log("DOMContentLoaded");
         console.log(window.innerWidth);
 
-        //Add event listener kun hvis skærmbredden er mindre end 1000px
-        if (window.innerWidth < 1000) {
-            console.log("hiddenAvailable");
-            document.querySelector(".bottom-player").addEventListener("click", slideUp);
-        }
-
-        //Tjek hver gang skærmen ændres om den er under 1000px for at kunne enten tilføje eller fjerne event listeners
-        window.addEventListener("resize", () => {
-            if (window.innerWidth < 1000) {
-                console.log("hiddenAvailable");
-                document.querySelector(".bottom-player").addEventListener("click", slideUp);
-            } else {
-                console.log("hiddenUnavailable");
-                document.querySelector(".bottom-player").removeEventListener("click", slideUp);
-
-                //Slide ned hvis man gør vinduet breddere mens slideren var oppe
-                if (document.querySelector(".bottom-player-drag i").classList.contains("fa-chevron-down")) {
-                    console.log("startSlideDown");
-                    slideDown();
+        document.querySelector(".bottom-player").addEventListener("click", slideUp);
+        /*
+                //Add event listener kun hvis skærmbredden er mindre end 1000px
+                if (window.innerWidth < 1000) {
+                    console.log("hiddenAvailable");
+                    document.querySelector(".bottom-player").addEventListener("click", slideUp);
                 }
-            }
-        })
+
+                //Tjek hver gang skærmen ændres om den er under 1000px for at kunne enten tilføje eller fjerne event listeners
+                window.addEventListener("resize", () => {
+                    if (window.innerWidth < 1000) {
+                        console.log("hiddenAvailable");
+                        document.querySelector(".bottom-player").addEventListener("click", slideUp);
+                    } else {
+                        console.log("hiddenUnavailable");
+                        document.querySelector(".bottom-player").removeEventListener("click", slideUp);
+
+                        //Slide ned hvis man gør vinduet breddere mens slideren var oppe
+                        if (document.querySelector(".bottom-player-drag i").classList.contains("fa-chevron-down")) {
+                            console.log("startSlideDown");
+                            slideDown();
+                        }
+                    }
+                })*/
     })
 
     function slideUp() {
