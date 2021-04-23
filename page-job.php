@@ -3,6 +3,7 @@
         box-sizing: border-box;
     }
 
+    /*unik CSS her*/
     .elementor img {
         height: 100% !important;
     }
@@ -40,8 +41,8 @@
         font-family: Montserrat;
         font-weight: 700;
         box-shadow: 4px 4px 0 #000;
-        margin-top: -20rem;
-        margin-left: -1rem;
+        margin-top: -15rem;
+        margin-left: 0rem;
         transition-timing-function: cubic-bezier(.4, 0, .2, 1);
         transition-duration: .15s;
         cursor: pointer;
@@ -57,7 +58,7 @@
     @media screen and (min-width: 700px) {
         .alg_back_button_input {
             margin-top: -15rem;
-            margin-left: -17rem;
+            margin-left: 0rem;
         }
 
 

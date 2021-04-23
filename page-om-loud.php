@@ -6,6 +6,7 @@
         margin-left: 5vw;
     }
 
+
     .entry-header> :last-child {
         margin-bottom: 8px;
     }
@@ -43,6 +44,7 @@
         transform: translate(1px, 1px);
     }
 
+    /*unik CSS her*/
     #wpforms-submit-420 {
         background: #DB0038;
         color: white;
@@ -58,6 +60,7 @@
 
     }
 
+    /*unik CSS her*/
     #wpforms-submit-420:hover {
         box-shadow: 0 0 0;
         transform: translate(1px, 1px);
