@@ -20,11 +20,13 @@
         color: white;
     }
 
-    .open {
+    .open,
+    .close {
         margin: 1rem;
     }
 
-    .open svg {
+    .open svg,
+    .close svg {
         width: 5rem;
         height: 5rem;
         color: white;
@@ -32,9 +34,15 @@
 
     .menu-button-container {
         padding-bottom: 0;
+        padding-top: 0;
     }
 
-    .site-navigation {}
+
+    @media only screen and (max-width: 481px) {
+        .admin-bar .has-logo.has-title-and-tagline .primary-navigation>.primary-menu-container {
+            top: 5rem;
+        }
+    }
 
 </style>
 <nav id="site-navigation" class="primary-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary menu', 'twentytwentyone' ); ?>">
@@ -43,7 +51,7 @@
             <span class="dropdown-icon open">
                 <?php echo twenty_twenty_one_get_icon_svg( 'ui', 'menu' ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
             </span>
-            <span class="dropdown-icon close"><?php esc_html_e( 'Close', 'twentytwentyone' ); ?>
+            <span class="dropdown-icon close">
                 <?php echo twenty_twenty_one_get_icon_svg( 'ui', 'close' ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
             </span>
         </button><!-- #primary-mobile-menu -->

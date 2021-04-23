@@ -13,7 +13,7 @@ get_header();
 <style>
     section {
         max-width: 1200px;
-        margin: 1rem;
+        margin: 0 1rem;
     }
 
     @media (min-width: 1200px) {
@@ -24,8 +24,12 @@ get_header();
 
     #primary,
     #main {
-        margin-top: 0;
-        padding-top: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .site-main>* {
+        margin: 0;
     }
 
     /*------------landing------------*/
@@ -72,24 +76,33 @@ get_header();
         transform: translate(1px, 1px);
     }
 
-    .button-red {
+    .bg-red {
         background: #DB0038 !important;
+        color: white !important;
     }
 
-    .button-peach {
+    .bg-peach {
         background: #F19C7A !important;
+        color: white !important;
     }
 
-    .button-green {
+    .bg-green {
         background: #588B8B !important;
+        color: white !important;
     }
 
-    .button-yellow {
+    .bg-yellow {
         background: #FABA42 !important;
+        color: white !important;
     }
 
-    .button-orange {
+    .bg-orange {
         background: #ED6A1D !important;
+        color: white !important;
+    }
+
+    .bg-cloud {
+        background: #DADADA !important;
     }
 
     /*------------feed------------*/
@@ -210,6 +223,10 @@ get_header();
         margin-bottom: 2rem;
     }
 
+    .section-padding {
+        padding: 2rem 0;
+    }
+
 </style>
 <div id="landing-full">
     <div id="landing">
@@ -218,11 +235,13 @@ get_header();
                 <h1>LOUD</h1>
             </div>
             <div id="landing-text-bottom">
-                <a class="custom-button button-red">LYT LIVE</a>
-                <a class="custom-button button-peach" href="/kea/loud/wordpress/podcasts/">HØR PODCASTS</a>
+                <a class="custom-button bg-red">LYT LIVE</a>
+                <a class="custom-button bg-peach" href="/kea/loud/wordpress/podcasts/">HØR PODCASTS</a>
             </div>
         </div>
     </div>
+</div>
+<div>
     <section id="section-feed">
         <h2>LOUDs feed</h2>
         <div class="container-feed">
@@ -370,89 +389,148 @@ get_header();
             <script async src="//www.instagram.com/embed.js"></script>
         </div>
         <div class="centre-text">
-            <a class="custom-button button-red" href="https://www.instagram.com/radio.louddk">SE FEED</a>
+            <a class="custom-button bg-red" href="https://www.instagram.com/radio.louddk">SE FEED</a>
         </div>
     </section>
+</div>
+<div>
     <section id="section-podcasts">
         <h2>Udvalgte podcasts</h2>
         <div class="container"></div>
     </section>
+</div>
+<div>
     <section id="section-infographic">
         <h2>Infographic</h2>
     </section>
-    <section id="section-partners">
+</div>
+<div class="bg-cloud">
+    <section id="section-partners" class="section-padding">
         <h2>LOUD-partnere</h2>
-        <p>På LOUD har vi allerede nogle men ser altid frem til partnere. Både Roskilde Festival og VEGA samt Nationalmuseet er alle tre partnerede med os og bidrager til vores vækst og udvikling, idet de skaber nyt og interessant indhold. Herunder kan du høre vores favorites.</p>
-        <div id="partner-ros">
-            <h3>ROSKILDE FESTIVAL</h3>
-            <div class="container"></div>
-        </div>
-        <div id="partner-vega">
-            <h3>VEGA</h3>
-            <div class="container"></div>
-        </div>
-        <div id="partner-natmus">
-            <h3>NATIONALMUSEET</h3>
-            <div class="container"></div>
-        </div>
+        <p>På LOUD har vi allerede nogle men ser altid frem til flere partnere. Både Roskilde Festival og VEGA samt Nationalmuseet er alle tre partnerede med os og bidrager til vores vækst og udvikling, idet de skaber nyt og interessant indhold. Herunder kan du høre vores favorites.</p>
     </section>
-    <template>
-        <article>
-            <div class="top">
-                <img class="image">
-                <div class="text">
-                    <h3></h3>
-                    <p></p>
-                </div>
+</div>
+<div class="bg-orange">
+    <section id="partner-ros" class="section-padding">
+        <h3>ROSKILDE FESTIVAL</h3>
+        <div class="container"></div>
+    </section>
+</div>
+<div class="bg-green">
+    <section id="partner-vega" class="section-padding">
+        <h3>VEGA</h3>
+        <div class="container"></div>
+    </section>
+</div>
+<div class="bg-peach">
+    <section id="partner-natmus" class="section-padding">
+        <h3>NATIONALMUSEET</h3>
+        <div class="container"></div>
+    </section>
+</div>
+<template>
+    <article>
+        <div class="top">
+            <img class="image">
+            <div class="text">
+                <h3></h3>
+                <p></p>
             </div>
-            <div class="bottom">
-                <div class="play-button">
-                    <i class="far fa-play-circle"></i>
-                    <p>Hør seneste podcast</p>
-                </div>
+        </div>
+        <div class="bottom">
+            <div class="play-button">
+                <i class="far fa-play-circle"></i>
+                <p>Hør seneste podcast</p>
             </div>
-        </article>
-    </template>
-    <script>
-        document.addEventListener("DOMContentLoaded", loadJSON);
+        </div>
+    </article>
+</template>
+<script>
+    document.addEventListener("DOMContentLoaded", loadJSON);
 
-        let podcasts;
-        let podcast;
+    let podcasts;
+    let podcast;
 
-        //Her defineres konstanter til senere brug for fetch af json
-        const url = "http://malthekusk.one/kea/loud/wordpress/wp-json/wp/v2/podcast?per_page=100";
+    //Her defineres konstanter til senere brug for fetch af json
+    const url = "http://malthekusk.one/kea/loud/wordpress/wp-json/wp/v2/podcast?per_page=100";
 
-        // Her hentes json ind fra restdb, og sendes vider til funktionen showPodcasts
-        async function loadJSON() {
-            //Henter json og gemmer det som art
-            const JSONData = await fetch(url);
-            podcasts = await JSONData.json();
-            showPodcasts();
-        }
+    // Her hentes json ind fra restdb, og sendes vider til funktionen showPodcasts
+    async function loadJSON() {
+        //Henter json og gemmer det som art
+        const JSONData = await fetch(url);
+        podcasts = await JSONData.json();
+        showPodcasts();
+    }
 
-        // I funktionen showPodcasts, sættes hvert enkelt kunstværk ind i HTML
-        function showPodcasts() {
-            console.log("showingPodcasts");
-            console.log(podcasts);
-            const rng1 = podcasts[Math.floor(Math.random() * podcasts.length)];
-            const rng2 = podcasts[Math.floor(Math.random() * podcasts.length)];
-            const rng3 = podcasts[Math.floor(Math.random() * podcasts.length)];
-            const rngCasts = [rng1, rng2, rng3];
-            console.log(rngCasts);
+    // I funktionen showPodcasts, sættes hvert enkelt kunstværk ind i HTML
+    function showPodcasts() {
+        console.log("showingPodcasts");
+        console.log(podcasts);
+        const rng1 = podcasts[Math.floor(Math.random() * podcasts.length)];
+        const rng2 = podcasts[Math.floor(Math.random() * podcasts.length)];
+        const rng3 = podcasts[Math.floor(Math.random() * podcasts.length)];
+        const rngCasts = [rng1, rng2, rng3];
+        console.log(rngCasts);
 
+        //Her definerers konstanter til senere brug i kloningen af template
+        const template = document.querySelector("template");
+        const container = document.querySelector("#section-podcasts .container");
+
+        /*  container.textContent = " ";*/ // HTML containeren tømmes for eksisterende indhold, og kan nu få tilført nyt indhold.
+
+        rngCasts.forEach(podcast => {
+            console.log("looping");
             //Her definerers konstanter til senere brug i kloningen af template
             const template = document.querySelector("template");
             const container = document.querySelector("#section-podcasts .container");
 
-            /*  container.textContent = " ";*/ // HTML containeren tømmes for eksisterende indhold, og kan nu få tilført nyt indhold.
+            let clone = template.cloneNode(true).content; //Her klones template og udfyldes  med data fra json
 
-            rngCasts.forEach(podcast => {
-                console.log("looping");
-                //Her definerers konstanter til senere brug i kloningen af template
-                const template = document.querySelector("template");
-                const container = document.querySelector("#section-podcasts .container");
+            clone.querySelector("img").src = podcast.billede.guid;
+            clone.querySelector("img").alt = podcast.kort;
+            clone.querySelector("h3").textContent = podcast.title.rendered;
+            clone.querySelector("p").textContent = podcast.kort;
+            clone.querySelector("article").addEventListener("click", () => {
+                location.href = podcast.link;
+            });
+            container.appendChild(clone); //Klonerne tilføres til DOM
 
-                let clone = template.cloneNode(true).content; //Her klones template og udfyldes  med data fra json
+        })
+
+        /*--------------placeholder for partnere podcast-----------*/
+
+        const partner1 = [rng1, rng1, rng1];
+        const partner2 = [rng2, rng2, rng2];
+        const partner3 = [rng3, rng3, rng3];
+
+        podcasts.forEach(podcast => {
+            console.log("looping ROS-podcasts");
+            //Her definerers konstanter til senere brug i kloningen af template
+            const template = document.querySelector("template");
+            const container = document.querySelector("#partner-ros .container");
+
+            if (podcast.partner == "ros") {
+                let clone = template.cloneNode(true).content; //Her klones template og udfyldes med data fra json
+
+                clone.querySelector("img").src = podcast.billede.guid;
+                clone.querySelector("img").alt = podcast.kort;
+                clone.querySelector("h3").textContent = podcast.title.rendered;
+                clone.querySelector("p").textContent = podcast.kort;
+                clone.querySelector("article").addEventListener("click", () => {
+                    location.href = podcast.link;
+                });
+                container.appendChild(clone); //Klonerne tilføres til DOM}
+            }
+        })
+
+        podcasts.forEach(podcast => {
+            console.log("looping VEGA-podcasts");
+            //Her definerers konstanter til senere brug i kloningen af template
+            const template = document.querySelector("template");
+            const container = document.querySelector("#partner-vega .container");
+
+            if (podcast.partner == "vega") {
+                let clone = template.cloneNode(true).content; //Her klones template og udfyldes med data fra json
 
                 clone.querySelector("img").src = podcast.billede.guid;
                 clone.querySelector("img").alt = podcast.kort;
@@ -462,91 +540,32 @@ get_header();
                     location.href = podcast.link;
                 });
                 container.appendChild(clone); //Klonerne tilføres til DOM
+            }
+        })
 
-            })
+        podcasts.forEach(podcast => {
+            console.log("looping Nationalmuseet-podcasts");
+            //Her definerers konstanter til senere brug i kloningen af template
+            const template = document.querySelector("template");
+            const container = document.querySelector("#partner-natmus .container");
 
-            /*--------------placeholder for partnere podcast-----------*/
+            if (podcast.partner == "natmus") {
+                let clone = template.cloneNode(true).content; //Her klones template og udfyldes med data fra json
 
-            const partner1 = [rng1, rng1, rng1];
-            const partner2 = [rng2, rng2, rng2];
-            const partner3 = [rng3, rng3, rng3];
+                clone.querySelector("img").src = podcast.billede.guid;
+                clone.querySelector("img").alt = podcast.kort;
+                clone.querySelector("h3").textContent = podcast.title.rendered;
+                clone.querySelector("p").textContent = podcast.kort;
+                clone.querySelector("article").addEventListener("click", () => {
+                    location.href = podcast.link;
+                });
+                container.appendChild(clone); //Klonerne tilføres til DOM
+            }
+        })
+    }
 
-            podcasts.forEach(podcast => {
-                console.log("looping ROS-podcasts");
-                //Her definerers konstanter til senere brug i kloningen af template
-                const template = document.querySelector("template");
-                const container = document.querySelector("#partner-ros .container");
-
-                if (podcast.partner == "ros") {
-                    let clone = template.cloneNode(true).content; //Her klones template og udfyldes med data fra json
-
-                    clone.querySelector("img").src = podcast.billede.guid;
-                    clone.querySelector("img").alt = podcast.kort;
-                    clone.querySelector("h3").textContent = podcast.title.rendered;
-                    clone.querySelector("p").textContent = podcast.kort;
-                    clone.querySelector("article").addEventListener("click", () => {
-                        location.href = podcast.link;
-                    });
-                    container.appendChild(clone); //Klonerne tilføres til DOM}
-                }
-            })
-
-            podcasts.forEach(podcast => {
-                console.log("looping VEGA-podcasts");
-                //Her definerers konstanter til senere brug i kloningen af template
-                const template = document.querySelector("template");
-                const container = document.querySelector("#partner-vega .container");
-
-                if (podcast.partner == "vega") {
-                    let clone = template.cloneNode(true).content; //Her klones template og udfyldes med data fra json
-
-                    clone.querySelector("img").src = podcast.billede.guid;
-                    clone.querySelector("img").alt = podcast.kort;
-                    clone.querySelector("h3").textContent = podcast.title.rendered;
-                    clone.querySelector("p").textContent = podcast.kort;
-                    clone.querySelector("article").addEventListener("click", () => {
-                        location.href = podcast.link;
-                    });
-                    container.appendChild(clone); //Klonerne tilføres til DOM
-                }
-            })
-
-            podcasts.forEach(podcast => {
-                console.log("looping Nationalmuseet-podcasts");
-                //Her definerers konstanter til senere brug i kloningen af template
-                const template = document.querySelector("template");
-                const container = document.querySelector("#partner-natmus .container");
-
-                if (podcast.partner == "natmus") {
-                    let clone = template.cloneNode(true).content; //Her klones template og udfyldes med data fra json
-
-                    clone.querySelector("img").src = podcast.billede.guid;
-                    clone.querySelector("img").alt = podcast.kort;
-                    clone.querySelector("h3").textContent = podcast.title.rendered;
-                    clone.querySelector("p").textContent = podcast.kort;
-                    clone.querySelector("article").addEventListener("click", () => {
-                        location.href = podcast.link;
-                    });
-                    container.appendChild(clone); //Klonerne tilføres til DOM
-                }
-            })
-        }
-
-    </script>
-</div><!-- #primary -->
-
+</script>
 <?php
-/* Start the Loop */
-while ( have_posts() ) :
-	the_post();
-	get_template_part( 'template-parts/content/content-page' );
-
-	// If comments are open or there is at least one comment, load up the comment template.
-	if ( comments_open() || get_comments_number() ) {
-		comments_template();
-	}
-endwhile; // End of the loop.
-
 get_template_part( 'template-parts/footer/player' );
 get_footer();
 ?>
