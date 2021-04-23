@@ -39,6 +39,13 @@ get_header();
 		flex-grow: 1;
 	}
 
+	.kategorier {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+		padding: 20px;
+	}
+
 	@media (max-width: 600px) {
 
 		.popu_podcast {
@@ -71,9 +78,10 @@ get_header();
 
 <section>
 	<main class="pod_main">
+		<h2>Populære podcasts</h2>
 		<div class="popu_podcast"></div>
+		<h2>Kategorier</h2>
 		<div class="kategorier">
-			<h2>Kategorier</h2>
 			<button type="button">Alle</button>
 			<button type="button">True crime</button>
 			<button type="button">Samfund/ Kultur</button>

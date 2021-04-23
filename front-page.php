@@ -54,14 +54,13 @@ get_header();
 
     .custom-button {
         display: inline-block;
-        background: #DB0038;
-        color: white;
+        color: white !important;
         padding: 1rem 2rem;
         border-radius: 1rem;
         font-family: Montserrat;
         font-weight: 700;
         box-shadow: 4px 4px 0 #000;
-        text-decoration: none;
+        text-decoration: none !important;
         margin: 1rem 1.5rem;
         transition-timing-function: cubic-bezier(.4, 0, .2, 1);
         transition-duration: .15s;
@@ -73,8 +72,24 @@ get_header();
         transform: translate(1px, 1px);
     }
 
-    .button-light {
-        background: #F19C7A;
+    .button-red {
+        background: #DB0038 !important;
+    }
+
+    .button-peach {
+        background: #F19C7A !important;
+    }
+
+    .button-green {
+        background: #588B8B !important;
+    }
+
+    .button-yellow {
+        background: #FABA42 !important;
+    }
+
+    .button-orange {
+        background: #ED6A1D !important;
     }
 
     /*------------feed------------*/
@@ -92,13 +107,17 @@ get_header();
         text-align: center;
     }
 
-    @media (min-width: 650px) {
+    iframe {
+        margin: 0 auto !important;
+    }
+
+    @media (min-width: 700px) {
         #section-feed .container-feed {
             grid-template-columns: repeat(2, 1fr);
         }
     }
 
-    @media (min-width: 950px) {
+    @media (min-width: 1050px) {
         #section-feed .container-feed {
             grid-template-columns: repeat(3, 1fr);
         }
@@ -137,7 +156,7 @@ get_header();
 
     article .top {
         display: grid;
-        grid-template-columns: 2fr 5fr;
+        grid-template-columns: 3fr 8fr;
         grid-gap: 0.5rem;
     }
 
@@ -177,7 +196,7 @@ get_header();
 
         article .top .text p {
             font-size: 1rem;
-            margin-bottom: 0;
+            margin-bottom: 0 !important;
         }
 
         article .play-button {
@@ -199,8 +218,8 @@ get_header();
                 <h1>LOUD</h1>
             </div>
             <div id="landing-text-bottom">
-                <a class="custom-button">LYT LIVE</a>
-                <a class="custom-button button-light" href="/kea/loud/wordpress/podcasts/">HØR PODCASTS</a>
+                <a class="custom-button button-red">LYT LIVE</a>
+                <a class="custom-button button-peach" href="/kea/loud/wordpress/podcasts/">HØR PODCASTS</a>
             </div>
         </div>
     </div>
@@ -351,7 +370,7 @@ get_header();
             <script async src="//www.instagram.com/embed.js"></script>
         </div>
         <div class="centre-text">
-            <a class="custom-button" href="https://www.instagram.com/radio.louddk">SE FEED</a>
+            <a class="custom-button button-red" href="https://www.instagram.com/radio.louddk">SE FEED</a>
         </div>
     </section>
     <section id="section-podcasts">
@@ -363,7 +382,7 @@ get_header();
     </section>
     <section id="section-partners">
         <h2>LOUD-partnere</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia ultricies sapien nec dapibus. Morbi non nisl ac mi pretium tempor. Nam porta est nec urna sodales porttitor. Ut porttitor congue urna sed efficitur. Nullam vitae nunc quis lectus mollis accumsan. Nulla bibendum lectus tempor, interdum sapien at, consectetur leo. Maecenas sit amet justo mauris.</p>
+        <p>På LOUD har vi allerede nogle men ser altid frem til partnere. Både Roskilde Festival og VEGA samt Nationalmuseet er alle tre partnerede med os og bidrager til vores vækst og udvikling, idet de skaber nyt og interessant indhold. Herunder kan du høre vores favorites.</p>
         <div id="partner-ros">
             <h3>ROSKILDE FESTIVAL</h3>
             <div class="container"></div>
