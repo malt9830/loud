@@ -13,17 +13,6 @@ get_header();
 ?>
 <style>
 
-/* article #post-38 {
-	margin: 0;
-	padding: 0;
-} */
-
-/* .entry-content .wp-block-columns { 
-	margin: 0;
-	padding: 0;
-	width: 100%;
-} */
-
 .has-small-font-size {
 	font-size: 0.8rem;
 	font-family: Montserrat;
@@ -64,10 +53,6 @@ p {
 	margin-block-start: 0;
 }
 
-.wp-block-buttons {
-	margin-top: 5px !important;
-}
-
 #primary {
 	margin-top: 0;
 }
@@ -79,12 +64,11 @@ p {
 	height: 100%;
 }
 
-
 .wp-block-button__link  {
 	/* display: inline-block; */
     background: #F19C7A;
     color: white;
-    padding: -1rem !important;
+    padding: 0 !important;
     border-radius: 1rem;
 	border: none;
     font-family: Montserrat;
@@ -92,35 +76,106 @@ p {
     box-shadow: 4px 4px 0 #000;
     text-decoration: none;
     /* margin: 1rem 1.5rem; */
-    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
-    transition-duration: .15s;
-    text-align: center;
-	height: 20px;
-	margin: 0 !important;
+    /* transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: .15s; */
+    /* text-align: center; */
+	/* height: 20px; */
+	/* margin: 0 !important; */
 }
 
-.wp-block-button {
-	margin: 5;
-	padding: -1rem !important;
-	height: 20px;
-
+.wp-block-buttons {
+	margin-top: 7px !important;
 }
-/* 
-.lab-button {
-	margin: 0;
-	padding: -5px 5px 5px 5px !important;
-	font-size: 0.8rem;
 
-} */
+.wp-block-button__link:hover {
+	box-shadow: none;
+	background: #F19C7A !important;
+    color: white;
+}
 
-
+.event-text {
+margin-top: 7px;
+}
 
 </style>
 
+<template>
+        <article>
+            <div class="top">
+                <img class="image">
+                <div class="text">
+                    <h3></h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="play-button">
+                    <i class="far fa-play-circle"></i>
+                    <p>Lyt til podcasts der startede i LOUD LAB</p>
+                </div>
+            </div>
+        </article>
+    </template>
+
+	<section id="section-podcasts">
+        <div class="container"></div>
+    </section>
+
+	<script>
+        document.addEventListener("DOMContentLoaded", loadJSON);
+
+        let podcasts;
+        let podcast;
+
+        //Her defineres konstanter til senere brug for fetch af json
+        const url = "http://malthekusk.one/kea/loud/wordpress/wp-json/wp/v2/podcast?per_page=100";
+
+        // Her hentes json ind, og sendes vider til funktionen showPodcasts
+        async function loadJSON() {
+            //Henter json og gemmer det som art
+            const JSONData = await fetch(url);
+            podcasts = await JSONData.json();
+            showPodcasts();
+        }
+
+		 // I funktionen showPodcasts, sættes hver enkelt podcast ind i HTML
+		 function showPodcasts() {
+            console.log("showingPodcasts");
+            console.log(podcasts);
+            const rng1 = podcasts[Math.floor(Math.random() * podcasts.length)];
+            const rng2 = podcasts[Math.floor(Math.random() * podcasts.length)];
+            const rng3 = podcasts[Math.floor(Math.random() * podcasts.length)];
+            const rngCasts = [rng1, rng2, rng3];
+            console.log(rngCasts);
+
+            //Her definerers konstanter til senere brug i kloningen af template
+            const template = document.querySelector("template");
+            const container = document.querySelector("#section-podcasts .container");
+
+            /*  container.textContent = " ";*/ // HTML containeren tømmes for eksisterende indhold, og kan nu få tilført nyt indhold.
+
+            rngCasts.forEach(podcast => {
+                console.log("looping");
+                //Her definerers konstanter til senere brug i kloningen af template
+                const template = document.querySelector("template");
+                const container = document.querySelector("#section-podcasts .container");
+
+                let clone = template.cloneNode(true).content; //Her klones template og udfyldes med data fra json
+
+                clone.querySelector("img").src = podcast.billede.guid;
+                clone.querySelector("img").alt = podcast.kort;
+                clone.querySelector("h3").textContent = podcast.title.rendered;
+                clone.querySelector("p").textContent = podcast.kort;
+                clone.querySelector("article").addEventListener("click", () => {
+                    location.href = podcast.link;
+                });
+                container.appendChild(clone); //Klonerne tilføres til DOM
+
+            })
+
+		</script>
 
 
-<!-- <h1>LOUD LAB</h1> -->
-<!-- <?php echo do_shortcode('[metaslider id="264"]'); ?> -->
 
 
 <?php
