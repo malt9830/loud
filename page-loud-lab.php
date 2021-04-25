@@ -60,9 +60,23 @@ p {
 .lab-event-row {
 	border: 1px solid black;
 }
-/* .lab-event-row {
+
+.h2-lab {
+			max-width: ;
+			font-family: Montserrat;
+    font-weight: 900;
+	font-size: 2rem;
+	margin-left: 2vw;
+		}
+
+
+.lab-date {
+	background-color: green !important;
 	height: 100%;
-} */
+	object-fit: cover;
+	margin: 0;
+
+}
 
 @media (min-width: 1200px)
  {
@@ -70,7 +84,6 @@ p {
 	width: 60vw;
 }
  }
-
  
 .wp-block-button__link  {
 	/* display: inline-block; */
@@ -166,6 +179,11 @@ padding: 0 5px 2px 5px;
         display: inline-block;
     }
 
+	.podcasts-article {
+		margin-top: 0 !important;
+
+	}
+
     @media (min-width: 650px) {
 
 		.podcasts-article .top {
@@ -191,7 +209,35 @@ padding: 0 5px 2px 5px;
 		.podcasts-article .play-button {
             text-align: center;
         }
+
+		.entry-content {
+			max-width: none !important;
+
+		}
     }
+
+/* responsiv infografik - byt mellem to billeder i mobile vs. desktop	 */
+
+	@media only screen and (min-width: 651px) {
+		.mobile-infografik {
+			display:none;
+		}
+		
+		.desktop-infografik {
+			display:block;
+		}
+	}
+	
+	/* show mobile hide desktop */
+	@media only screen and (max-width: 650px) {
+		.mobile-infografik {
+			display:block;
+				}
+				
+		.desktop-infografik {
+					display:none;
+			}
+		}
 
 .text {
 	margin-bottom: 10px;
