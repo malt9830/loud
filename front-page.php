@@ -420,10 +420,6 @@ get_header();
 
         /*--------------placeholder for partnere podcast-----------*/
 
-        const partner1 = [rng1, rng1, rng1];
-        const partner2 = [rng2, rng2, rng2];
-        const partner3 = [rng3, rng3, rng3];
-
         podcasts.forEach(podcast => {
             console.log("looping ROS-podcasts");
             //Her definerers konstanter til senere brug i kloningen af template
