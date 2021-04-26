@@ -274,6 +274,39 @@ article .play-button p {
     margin-top: 0 !important;
 }
 
+/*----------back-button----------*/
+
+.alg_back_button_input {
+    background: #F19C7A;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: none;
+    font-family: Montserrat;
+    font-weight: 700;
+    box-shadow: 4px 4px 0 #000;
+    margin-top: -17rem;
+    margin-left: 0rem;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: .15s;
+    cursor: pointer;
+
+}
+
+.alg_back_button_input:hover {
+    box-shadow: 0 0 0;
+    transform: translate(1px, 1px);
+}
+
+
+@media screen and (min-width: 700px) {
+    .alg_back_button_input {
+        margin-top: -15rem;
+        margin-left: 0rem;
+    }
+}
+
+
 /*----------max-width-control----------*/
 
 .elementor-41 .elementor-element.elementor-element-2488784 > .elementor-container,
@@ -358,4 +391,12 @@ section {
     .entry-header {
         margin: 0 auto !important;
     }
+}
+
+.elementor-section {
+    max-width: none !important;
+}
+
+.elementor {
+    max-width: var(--responsive--aligndefault-width) !important;
 }
