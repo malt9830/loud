@@ -1,14 +1,12 @@
 <style>
-    /*unik CSS her*/
-    #app img {
-        height: 52% !important;
-        width: 100%;
+    #ikoner .elementor-widget-image .elementor-image img {
+        width: 61px !important;
+        height: 61px !important;
     }
 
-
-    /*unik CSS her*/
-    #kort img {
-        height: 95% !important;
+    #kort .elementor-widget-image .elementor-image img {
+        width: 100% !important;
+        height: 100% !important;
     }
 
 </style>
