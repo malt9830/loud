@@ -27,7 +27,6 @@ get_header();
     const url = "https://malthekusk.one/kea/loud/wordpress/wp-json/wp/v2/podcast?per_page=100";
     const catUrl = "https://malthekusk.one/kea/loud/wordpress/wp-json/wp/v2/categories";
 
-
     const pathname = window.location.pathname;
     const catID = pathname.substring(pathname.lastIndexOf('category/') + 9).split('/').join('');
 
@@ -47,11 +46,12 @@ get_header();
     function visPodcasts() {
         let template = document.querySelector("template");
         let container = document.querySelector("#popu_podcast");
+        let filter = "alle";
 
         console.log(catID);
 
         podcasts.forEach(podcast => {
-            if (podcast.kategori == catID) {
+            if (podcast.kategori == catID || filter == catID) {
                 let klon = template.cloneNode(true).content;
                 klon.querySelector("img").src = podcast.billede.guid;
                 klon.querySelector("div h3").innerHTML = podcast.title.rendered;
@@ -61,7 +61,6 @@ get_header();
                 });
                 container.appendChild(klon);
             }
-
         });
     }
 
