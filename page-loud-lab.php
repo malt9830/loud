@@ -16,16 +16,25 @@ get_header();
         border: 1px solid black;
     }
 
-    .desktop-infografik {
-        display: none;
-    }
+    /* responsiv infografik - byt mellem to billeder i mobile vs. desktop	 */
 
-    @media (min-width: 800px) {
-        .desktop-infografik {
-            display: block
+    @media (min-width: 651px) {
+        .mobile-infografik {
+            display: none;
         }
 
+        .desktop-infografik {
+            display: block;
+        }
+    }
+
+    /* show mobile hide desktop */
+    @media (max-width: 650px) {
         .mobile-infografik {
+            display: block;
+        }
+
+        .desktop-infografik {
             display: none;
         }
     }
