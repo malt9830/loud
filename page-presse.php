@@ -2,15 +2,16 @@
     #skriv {
         background-color: #ED6A1D;
         text-decoration: none !important;
-        color: white !important;
     }
 
     #presse {
         background-color: #FABA42;
         text-decoration: none !important;
-        color: white !important;
     }
 
+    .elementor a{
+        color:white;
+    }
 </style>
 
 
