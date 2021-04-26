@@ -4,9 +4,9 @@
         height: 61px !important;
     }
 
-    #kort .elementor-widget-image .elementor-image img {
-        width: 100% !important;
-        height: 100% !important;
+    #kort .elementor-image {
+        width: 70% !important;
+        height: 80% !important;
     }
 
 </style>
