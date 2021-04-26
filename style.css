@@ -415,18 +415,18 @@ section {
 }
 
 .underrubrik {
-    max-width: 1140px !important;
+    max-width: 900px !important;
     padding: 1rem !important;
     display: grid;
     grid-template-columns: 1fr;
 }
 
-/* @media (min-width:1140px) {
+@media (min-width:1140px) {
     .underrubrik {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 5fr 1fr;
         padding: 0 !important;
     }
-} */
+}
 
 .underrubrik .has-text-align-left {
     padding: 0 !important;
