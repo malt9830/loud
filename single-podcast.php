@@ -91,6 +91,7 @@ get_header();
 </style>
 
 <section>
+    <a class="custom-button bg-peach" onclick="window.history.back()">Back</a>
     <main class="single_main">
         <section id="section-single" class="section-padding">
             <article class="single_article">
