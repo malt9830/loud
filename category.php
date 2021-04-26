@@ -22,15 +22,21 @@ get_header();
 	</article>
 </template>
 
+
 <script>
 	let podcasts;
-	let aktuelcat = <?php echo get_the_ID() ?>;
+	let categories;
 	const url = "https://malthekusk.one/kea/loud/wordpress/wp-json/wp/v2/podcast?per_page=8";
+	const catUrl = "https://malthekusk.one/kea/loud/wordpress/wp-json/wp/v2/categories";
 
 	async function getJson() {
 		const data = await fetch(url);
 		podcasts = await data.json();
 		console.log(podcasts);
+
+		const catdata = await fetch(catUrl);
+		categories = await catdata.json();
+		console.log(categories);
 
 		visPodcasts();
 	}
@@ -41,7 +47,6 @@ get_header();
 
 		podcasts.forEach(podcast => {
 			let klon = template.cloneNode(true).content;
-
 			klon.querySelector("img").src = podcast.billede.guid;
 			klon.querySelector("div h3").innerHTML = podcast.title.rendered;
 			klon.querySelector("div .kort_info").innerHTML = podcast.kort;
