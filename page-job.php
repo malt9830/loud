@@ -4,6 +4,24 @@
         height: 100% !important;
     }
 
+    #job {
+        background-color: #ED6A1D;
+        text-decoration: none !important;
+        color: white !important;
+    }
+
+    #job2 {
+        background-color: #FABA42;
+        text-decoration: none !important;
+        color: white !important;
+    }
+
+    #job3 {
+        background-color: #588B8B;
+        text-decoration: none !important;
+        color: white !important;
+    }
+
 </style>
 
 
