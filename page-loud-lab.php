@@ -12,9 +12,50 @@
 get_header();
 ?>
 <style>
+
+	.alg_back_button_input {
+		margin-top: -13rem;
+	}
+
     .lab-event-row {
         border: 1px solid black;
+		background-color: #588b8b;
     }
+
+	.lab-button {
+		margin: 0 !important; 
+	}
+
+	.underrubrik {
+		
+	}
+
+.event-text {
+	padding: 5px 10px 0 3vw !important;
+	margin-bottom: 0 !important;
+	background-color: white;
+}
+
+	p .event-text {
+	margin-bottom: 0 !important;
+	margin-block-end: 0;
+}
+
+	#lab-events-all {
+		max-width: 750px;
+	}
+
+@media (min-width: 600px)
+	margin-left: 7vw;
+}
+	.lab-event-green {
+			padding: 10vw;
+	}
+
+	#section-podcasts {
+    max-width: 1140px !important;
+    margin: 0 1rem !important;
+}
 
     /* responsiv infografik - byt mellem to billeder i mobile vs. desktop	 */
 
