@@ -115,20 +115,6 @@ endwhile; // End of the loop.
         <p class="genre">genre goes here</p>
         </article>
 
-<article>
-    <div class="tidspunkt">13:00</div>
-</article>
-<article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/cd584822fd2b0fe2a12117e17b4c69ec.jpg" alt="">
-    </article>
-    <article>
-        <p class="podcast">den brogede vej</h3>
-        <p class="dato">1 apr 19</p>
-        <p class="tid">1 t. og 30 min.</p>
-        <p class="beskrivelse">kort beskrivelse af podcast</p>
-        <p class="genre">genre goes here</p>
-        </article>
-
 </div>
 
 <div id="tirsdag" class="dag collapsible">Tirsdag</div>
@@ -743,7 +729,7 @@ float:right;
 .dagsplan{
     max-height:0;
     overflow:auto;
-    transition: max-height 1s ease-out;
+    /* transition: max-height 1s ease-out; */
 
     display:grid;
     grid-template-columns: 1fr 2fr 3fr;
@@ -758,26 +744,34 @@ float:right;
     border-bottom:1px solid black;
 }
 
+/* .dagsplan article{
+    border-bottom:1px solid black;
+}  */
+
+.dagsplan article:nth-child(3n+1){
+	place-self:center !important;
+}
+
+.dagsplan article:nth-child(3n+2){
+	place-self:center !important;
+}
+
 .tidspunkt{
     grid-column:1/span 1;
     letter-spacing:.07rem;
     font-size: .9rem;
     font-weight: 400;
-
-/*** placerer tidspunkt i midten ***/
-    padding: 40px 20px;
-    text-align: center;
 }
 
 .billede{
     width:100%;
     grid-column:2/span 1;
-    padding: 10px 15px 20px 0;
+	padding: 10px 0 10px;
 }
 
 .podcast, .dato, .genre{
     grid-column:3/span 1;
-    padding-left: 5px;
+    padding-left: 10px;
     font-size:.8rem;
 }
 
@@ -794,7 +788,7 @@ float:right;
 }
 
 .genre{
-    padding-top:15px;
+    padding: 15px 0 15px 10px;
     color:#a9a9a9;
 }
 
@@ -819,7 +813,7 @@ float:right;
     display:grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows:auto;
-    margin:0 320px;
+    margin:0 320px 50px !important;
 }
 
 #dagsplan{
@@ -896,19 +890,10 @@ content: none;
     height:67vh;
 }
 
-.dagsplan article{
-    border-bottom:1px solid black;
-}
-
-.tidspunkt{
-/*** placerer tidspunkt i midten ***/
-padding: 75px 20px;
-}
-
 .billede{
     grid-column:2/span 1;
     width: 90%;
-    padding: 20px 30px 20px 0px;
+	padding: 20px;
 }
 
 .podcast{
@@ -929,12 +914,10 @@ padding: 75px 20px;
     /* tid+beskrivelse skal ikke vises i mobil */
     display:block;
     font-size:.8rem;
-    padding-left:5px;
+    padding-left:10px;
 }
 
-}
-
-}
+} /* end of @media */
 
 
 </style>
@@ -949,25 +932,47 @@ padding: 75px 20px;
 
 <script>
 
-document.addEventListener("DOMContentLoaded", start);
- console.log("DOMContentLoaded");
+// document.addEventListener("DOMContentLoaded", start);
  
- function start(){
-
-// var ugedage = document.getElementsByClassName("dag");
-// var valgtDag;
-
-// for (valgtDag = 0; valgtDag < ugedage.length; valgtDag++) {
-//  ugedage[valgtDag].addEventListener("click", function() {
-//     this.classList.toggle("active");
-//     var content = this.nextElementSibling;
-//     if (content.style.maxHeight){
-//       content.style.maxHeight = null;
-//     } else {
-//      content.style.maxHeight = content.scrollHeight + "px";
-//     }
-//   });
+//  function start(){
+// 	myFunction();
 // }
+
+
+// function myFunction() {
+//   var d = new Date();
+//   let today = d.getDay();
+//   var weekday = new Array(7);
+//   weekday[0] = "Sunday";
+//   weekday[1] = "Monday";
+//   weekday[2] = "Tuesday";
+//   weekday[3] = "Wednesday";
+//   weekday[4] = "Thursday";
+//   weekday[5] = "Friday";
+//   weekday[6] = "Saturday";
+
+//   var n = weekday[d.getDay()];
+//   console.log("Dag:", d.getDay());
+
+//   var dag = document.querySelector("#mandag");
+
+//   toggleContent(dag.nextElementSibling);
+  
+// }
+
+
+const colls = document.getElementsByClassName('collapsible');
+for (const coll of colls) {
+  coll.addEventListener('click', function() {
+    if (!this.classList.contains('active')) {
+      collapseAllOpenContent();
+    }
+    this.classList.toggle('active');
+    toggleContent(this.nextElementSibling);
+// console.log(this);  
+});
+}
+
 
 
 // toggle collapse of specified content
@@ -990,28 +995,8 @@ function collapseAllOpenContent() {
   }
 }
 
-const colls = document.getElementsByClassName('collapsible');
-for (const coll of colls) {
-  coll.addEventListener('click', function() {
-    if (!this.classList.contains('active')) {
-      collapseAllOpenContent();
-    }
-    this.classList.toggle('active');
-    toggleContent(this.nextElementSibling);
-  });
-}
-
-
-
-
-
-var dato = new Date();
-document.querySelector(".dag").textContent += dato.toDateString();
-
-
-
- }
-
+// var dato = new Date();
+// document.querySelector(".dag").textContent += dato.toDateString();
 
 </script>
 
