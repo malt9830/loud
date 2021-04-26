@@ -1,13 +1,5 @@
 <style>
-    #ikoner .elementor-widget-image .elementor-image img {
-        width: 61px !important;
-        height: 61px !important;
-    }
 
-    #kort .elementor-image {
-        width: 70% !important;
-        height: 80% !important;
-    }
 
 </style>
 

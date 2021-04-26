@@ -1,29 +1,14 @@
-<style>
-    #ikoner .elementor-widget-image .elementor-image img {
-        width: 61px !important;
-        height: 61px !important;
-    }
-
-    #kort .elementor-image {
-        width: 70% !important;
-        height: 80% !important;
-    }
-
-</style>
-
-
 <?php
 /**
  * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
  * @package WordPress
  * @subpackage Twenty_Twenty_One
  * @since Twenty Twenty-One 1.0
  */
 
 get_header();
+
+Test
 
 /* Start the Loop */
 while ( have_posts() ) :

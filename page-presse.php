@@ -1,12 +1,14 @@
 <style>
-    #ikoner .elementor-widget-image .elementor-image img {
-        width: 61px !important;
-        height: 61px !important;
+    #skriv {
+        background-color: #ED6A1D;
+        text-decoration: none !important;
+        color: white !important;
     }
 
-    #kort .elementor-image {
-        width: 70% !important;
-        height: 80% !important;
+    #presse {
+        background-color: #FABA42;
+        text-decoration: none !important;
+        color: white !important;
     }
 
 </style>
