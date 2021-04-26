@@ -61,21 +61,19 @@ get_header();
         display: inline-block;
         cursor: pointer;
         margin: 1rem !important;
+        padding: 0.7rem 1.5rem !important;
     }
 
-    .podcasts-media .fab {
-        margin: 0 !important;
-    }
-
-    .fas {
-        font-size: 3.5rem !important;
+    .podcasts-media .fab,
+    .podcasts-media .fas {
+        font-size: 2.5rem !important;
         color: white !important;
         margin: 0 !important;
     }
 
     .podcasts-media img {
-        height: 56px;
-        width: 56px;
+        height: 40px;
+        width: 40px;
     }
 
     /*--------pod-backgrounds--------*/
@@ -86,6 +84,26 @@ get_header();
 
     .bg-apple {
         background: #D56DFB;
+    }
+
+    /*--------episode-formatting--------*/
+
+    .play-button {
+        display: none;
+    }
+
+    .play-mobile {
+        font-size: 2.3rem !important;
+    }
+
+    @media (min-width:650px) {
+        .play-button {
+            display: block;
+        }
+
+        .play-mobile {
+            display: none;
+        }
     }
 
 </style>
@@ -137,12 +155,12 @@ get_header();
                         <div class="text-flex">
                             <p class="text-dato inline-text"></p>
                             <p class="text-time inline-text"></p>
+                            <i class="far fa-play-circle play-mobile"></i>
                         </div>
                         <div class="play-button">
                             <i class="far fa-play-circle"></i>
                             <p>Hør podcast</p>
                         </div>
-
                     </div>
                 </article>
             </template>

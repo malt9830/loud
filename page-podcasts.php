@@ -17,11 +17,43 @@ get_header();
 		grid-gap: 20px;
 		padding: 10px 0px;
 		margin-top: 0;
+
+		overflow-x: scroll;
+		scroll-snap-type: x mandatory;
 	}
 
 	.pod_article {
 		flex-grow: 1;
+
+		flex-basis: 50%;
+		flex-shrink: 0;
+		scroll-snap-align: center;
 	}
+
+	.wp-block-columns .wp-block-column>* {
+		margin-top: 0;
+	}
+
+	.pod_billede {
+		border-radius: 10px;
+	}
+
+	::-webkit-scrollbar {
+		width: 4px;
+		border: 1px solid #ffffff;
+		border-radius: 10px;
+	}
+
+	::-webkit-scrollbar-track {
+		border-radius: 10px;
+		background: #eeeeee;
+	}
+
+	::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		background: #b0b0b0;
+	}
+
 
 	/*-----------kategorier-----------*/
 
@@ -33,6 +65,10 @@ get_header();
 
 	#kategorier button {
 		margin: 0 !important;
+		height: 5rem;
+		text-align: left;
+		padding-top: 5px;
+		padding-left: 10px;
 	}
 
 	#kategorier button:nth-child(1) {
@@ -62,20 +98,15 @@ get_header();
 
 	/*-----------mobil-----------*/
 
-	@media (max-width: 600px) {
-
-		#popu_podcast {
-			overflow-x: scroll;
-			scroll-snap-type: x mandatory;
-		}
+	@media (min-width: 600px) {
 
 		.pod_article {
-			flex-basis: 50%;
-			flex-shrink: 0;
-			scroll-snap-align: center;
+			flex-basis: 20%;
 		}
 
-		.wp-block-columns .wp-block-column>* {}
+		#kategorier {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
 
 
 	}
@@ -137,20 +168,23 @@ get_header();
 
 	function opretKnapper() {
 		categories.forEach(cat => {
-			document.querySelector("#kategorier").innerHTML += `<button class="custom-button" data-podcast="${cat.id}">${cat.name}</button>`;
+			document.querySelector("#kategorier").innerHTML += `<a class="custom-button" data-category="${cat.id}" href="${cat.link}">${cat.name}</a>`;
+			console.log(cat.link);
+
 		});
 
-		addEventListenersToButtons();
+		//		addEventListenersToButtons();
 
 	}
 
-	function addEventListenersToButtons() {
-		document.querySelectorAll("#kategorier button").forEach(elm => {
-			elm.addEventListener("click", () => {
-				location.href = elm.link;
-			});
-		})
-	}
+	//	function addEventListenersToButtons() {
+	//		document.querySelectorAll("#kategorier button").forEach(elm => {
+	//			elm.addEventListener("click", () => {
+	//				location.href = elm.link;
+	//			});
+	//			console.log(elm.link)
+	//		})
+	//	}
 
 
 	function visPodcasts() {
