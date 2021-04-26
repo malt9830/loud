@@ -7,6 +7,7 @@
         padding: 0;
         margin: 0;
         cursor: pointer;
+        max-width: none !important;
     }
 
     .bottom-player-content {

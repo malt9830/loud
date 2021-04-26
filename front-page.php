@@ -11,25 +11,12 @@
 get_header();
 ?>
 <style>
-    section {
-        max-width: 1200px;
-        margin: 0 1rem;
-    }
-
-    @media (min-width: 1200px) {
-        section {
-            margin: 0 auto;
-        }
-    }
-
-    #primary,
-    #main {
-        margin: 0;
-        padding: 0;
+    #primary {
+        margin-top: 0 !important;
     }
 
     .site-main>* {
-        margin: 0;
+        max-width: none !important;
     }
 
     /*------------landing------------*/
@@ -44,65 +31,46 @@ get_header();
         height: 80vh;
     }
 
+    #splash {
+        background-image: url(http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/splash.png);
+        background-size: cover;
+        background-position: 50% 50%;
+        max-width: none;
+        width: 100%;
+        height: 80vh;
+    }
+
     #landing-text {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+
+        /*box*/
+        background: rgba(100, 10, 10, 0.7);
+        width: 300px;
+        height: 350px;
+        border-radius: 30px;
+        color: white;
     }
 
     #landing-text-top h1 {
         margin-bottom: 3rem;
     }
 
-    .custom-button {
-        display: inline-block;
-        color: white !important;
-        padding: 1rem 2rem;
-        border-radius: 1rem;
-        font-family: Montserrat;
-        font-weight: 700;
-        box-shadow: 4px 4px 0 #000;
-        text-decoration: none !important;
-        margin: 1rem 1.5rem;
-        transition-timing-function: cubic-bezier(.4, 0, .2, 1);
-        transition-duration: .15s;
-        text-align: center;
+    @media (max-width: 600px) {
+        #splash {
+            width: 100%;
+            height: 75vh;
+        }
     }
 
-    .custom-button:hover {
-        box-shadow: 0 0 0;
-        transform: translate(1px, 1px);
-    }
-
-    .bg-red {
-        background: #DB0038 !important;
-        color: white !important;
-    }
-
-    .bg-peach {
-        background: #F19C7A !important;
-        color: white !important;
-    }
-
-    .bg-green {
-        background: #588B8B !important;
-        color: white !important;
-    }
-
-    .bg-yellow {
-        background: #FABA42 !important;
-        color: white !important;
-    }
-
-    .bg-orange {
-        background: #ED6A1D !important;
-        color: white !important;
-    }
-
-    .bg-cloud {
-        background: #DADADA !important;
+    @media (min-width: 600px) {
+        #landing-text {
+            width: 505px !important;
+            height: 270px !important;
+        }
     }
 
     /*------------feed------------*/
@@ -136,6 +104,25 @@ get_header();
         }
     }
 
+    /*------------infografik------------*/
+
+    .infografik {
+        text-align: center;
+    }
+
+    .infografik img {
+        width: 100%;
+        margin-bottom: 5vw;
+    }
+
+    @media (min-width: 750px) {
+        .infografik img {
+            width: 50%;
+            margin-bottom: 5vw;
+        }
+
+    }
+
     /*------------podcasts------------*/
 
     section h2 {
@@ -143,79 +130,7 @@ get_header();
         margin-bottom: 2.5rem;
     }
 
-    .container {
-        display: grid;
-        grid-gap: 1rem;
-    }
 
-    @media (min-width:650px) {
-        .container {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    @media (min-width:950px) {
-        .container {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-
-    article {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        cursor: pointer;
-    }
-
-    article .top {
-        display: grid;
-        grid-template-columns: 3fr 8fr;
-        grid-gap: 0.5rem;
-    }
-
-    article .top .text h3 {
-        margin: 0;
-    }
-
-    article .top .text p {
-        line-height: 1.7rem;
-        margin-bottom: 1.3rem;
-    }
-
-    article .play-button {
-        font-size: 1.3rem;
-    }
-
-    article .play-button p {
-        display: inline-block;
-    }
-
-    @media (min-width: 650px) {
-
-        article .top {
-            grid-template-columns: 1fr;
-        }
-
-        article .top .text h3 {
-            margin-top: 1rem;
-        }
-    }
-
-    @media (max-width: 650px) {
-
-        article .top .text h3 {
-            font-size: 1.1rem;
-        }
-
-        article .top .text p {
-            font-size: 1rem;
-            margin-bottom: 0 !important;
-        }
-
-        article .play-button {
-            text-align: center;
-        }
-    }
 
     /*------------partners------------*/
 
@@ -230,6 +145,8 @@ get_header();
 </style>
 <div id="landing-full">
     <div id="landing">
+        <div id="splash">
+        </div>
         <div id="landing-text">
             <div id="landing-text-top">
                 <h1>LOUD</h1>
@@ -241,8 +158,8 @@ get_header();
         </div>
     </div>
 </div>
-<div>
-    <section id="section-feed">
+<div class="bg-yellow">
+    <section id="section-feed" class="section-padding">
         <h2>LOUDs feed</h2>
         <div class="container-feed">
             <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CN40bYJhWqR/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
@@ -393,15 +310,18 @@ get_header();
         </div>
     </section>
 </div>
-<div>
-    <section id="section-podcasts">
+<div class="bg-red">
+    <section id="section-podcasts" class="section-padding">
         <h2>Udvalgte podcasts</h2>
         <div class="container"></div>
     </section>
 </div>
 <div>
     <section id="section-infographic">
-        <h2>Infographic</h2>
+        <h2>Hvilken podcast skal du høre?</h2>
+        <div class="infografik">
+            <img src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/infografik2.png" alt="hvilken podcast skal du vælge">
+        </div>
     </section>
 </div>
 <div class="bg-cloud">
@@ -412,19 +332,19 @@ get_header();
 </div>
 <div class="bg-orange">
     <section id="partner-ros" class="section-padding">
-        <h3>ROSKILDE FESTIVAL</h3>
+        <h2>ROSKILDE FESTIVAL</h2>
         <div class="container"></div>
     </section>
 </div>
 <div class="bg-green">
     <section id="partner-vega" class="section-padding">
-        <h3>VEGA</h3>
+        <h2>VEGA</h2>
         <div class="container"></div>
     </section>
 </div>
 <div class="bg-peach">
     <section id="partner-natmus" class="section-padding">
-        <h3>NATIONALMUSEET</h3>
+        <h2>NATIONALMUSEET</h2>
         <div class="container"></div>
     </section>
 </div>

@@ -10,156 +10,82 @@ get_header();
 
 ?>
 <style>
-	/*-----------wp design-----------*/
+    /*-----------podcast-----------*/
 
-	.site-header,
-	.site-main,
-	.widget-area,
-	.site-footer {
-		padding: 0 !important;
-		margin: 0 !important;
-	}
+    #popu_podcast {
+        display: flex;
+        grid-gap: 20px;
+        padding: 10px 0px;
+    }
 
-	#primary {
-		margin: 0 !important;
-	}
+    .pod_article {
+        flex-grow: 1;
+    }
 
-	.site-main>* {
-		margin: 0 !important;
-	}
+    /*-----------kategorier-----------*/
 
-	.wp-block-columns .wp-block-column>* {
-		margin: 0;
-	}
+    #kategorier {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1.3rem;
+    }
 
-	.site-main>article>*:first-child,
-	.site-main>.not-found>*:first-child,
-	.entry-content>*:first-child,
-	[class*=inner-container]>*:first-child,
-	.wp-block-template-part>*:first-child {
-		margin: 0;
-		padding: 0;
-	}
+    #kategorier button {
+        margin: 0 !important;
+    }
 
+    #kategorier button:nth-child(1) {
+        background: #DB0038 !important;
+    }
 
-	/*-----------generel-----------*/
+    #kategorier button:nth-child(2),
+    #kategorier button:nth-child(4) {
+        background: #ED6A1D !important;
+    }
 
-	* {
-		margin: 0;
-		box-sizing: border-box;
-		font-family: 'Montserrat', sans-serif;
-	}
+    #kategorier button:nth-child(3),
+    #kategorier button:nth-child(7),
+    #kategorier button:nth-child(10) {
+        background: #F19C7A !important;
+    }
 
-	h1 {
-		font-size: 30px;
-	}
+    #kategorier button:nth-child(5),
+    #kategorier button:nth-child(8) {
+        background: #FABA42 !important;
+    }
 
-	h2 {
-		font-size: 21px;
-		padding-top: 25px;
-	}
+    #kategorier button:nth-child(6),
+    #kategorier button:nth-child(9) {
+        background: #588B8B !important;
+    }
 
-	h3 {
-		font-size: 16px;
-		margin-bottom: 0;
-		margin-top: 5px;
-	}
+    /*-----------mobil-----------*/
 
-	p {
-		font-size: 14px;
-	}
+    @media (max-width: 600px) {
 
-	img {
-		width: 100%;
-		vertical-align: middle;
-		border-radius: 15px;
-	}
+        #popu_podcast {
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+        }
 
-	/*-----------knapper-----------*/
+        .pod_article {
+            flex-basis: 50%;
+            flex-shrink: 0;
+            scroll-snap-align: center;
+        }
 
-	.cat_knap {
-		border-radius: 10px;
-		text-align: start;
-		padding-top: 5px;
-		padding-left: 10px;
-		font-size: 14px;
-		text-transform: uppercase;
-		height: 3.7rem;
-	}
-
-	#alle {
-		background-color: #DB0038;
-	}
-
-	#crime,
-	#musik,
-	#indad {
-		background-color: #F19C7A;
-	}
-
-	#kultur,
-	#livsstil {
-		background-color: #588B8B;
-	}
-
-	#politik,
-	#kunst {
-		background-color: #FABA42;
-	}
-
-	#komedie,
-	#business {
-		background-color: #ED6A1D;
-	}
-
-
-
-
-	/*-----------podcast-----------*/
-
-	#popu_podcast {
-		display: flex;
-		gap: 20px;
-		padding: 10px 0px;
-	}
-
-	.pod_article {
-		flex-grow: 1;
-	}
-
-	#kategorier {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 20px;
-	}
-
-	/*-----------mobil-----------*/
-
-	@media (max-width: 600px) {
-
-		#popu_podcast {
-			overflow-x: scroll;
-			scroll-snap-type: x mandatory;
-		}
-
-		.pod_article {
-			flex-basis: 50%;
-			flex-shrink: 0;
-			scroll-snap-align: center;
-		}
-
-	}
+    }
 
 </style>
 
 <template>
-	<article class="pod_article">
-		<img class="pod_billede" src="" alt="">
-		<div class="pod_indhold">
-			<h3></h3>
-			<p class="kort_info"></p>
-		</div>
-	</article>
+    <article class="pod_article">
+        <img class="pod_billede" src="" alt="">
+        <div class="pod_indhold">
+            <h3></h3>
+            <p class="kort_info"></p>
+        </div>
+    </article>
 </template>
 
 <!--
@@ -187,57 +113,57 @@ get_header();
 -->
 
 <script>
-	let podcasts;
-	let categories;
-	const url = "https://malthekusk.one/kea/loud/wordpress/wp-json/wp/v2/podcast?per_page=8";
-	const catUrl = "https://malthekusk.one/kea/loud/wordpress/wp-json/wp/v2/categories";
+    let podcasts;
+    let categories;
+    const url = "https://malthekusk.one/kea/loud/wordpress/wp-json/wp/v2/podcast?per_page=8";
+    const catUrl = "https://malthekusk.one/kea/loud/wordpress/wp-json/wp/v2/categories";
 
-	async function getJson() {
-		const data = await fetch(url);
-		podcasts = await data.json();
-		console.log(podcasts);
+    async function getJson() {
+        const data = await fetch(url);
+        podcasts = await data.json();
+        console.log(podcasts);
 
-		const catdata = await fetch(catUrl);
-		categories = await catdata.json();
-		console.log(categories);
+        const catdata = await fetch(catUrl);
+        categories = await catdata.json();
+        console.log(categories);
 
-		visPodcasts();
-		opretKnapper();
-	}
+        visPodcasts();
+        opretKnapper();
+    }
 
-	function opretKnapper() {
-		categories.forEach(cat => {
-			document.querySelector("#kategorier").innerHTML += `<button class="cat_knap" = "${cat.id}">${cat.name}</button>`;
-		});
+    function opretKnapper() {
+        categories.forEach(cat => {
+            document.querySelector("#kategorier").innerHTML += `<button class="custom-button" = "${cat.id}">${cat.name}</button>`;
+        });
 
-	}
-
-
-	function visPodcasts() {
-		let template = document.querySelector("template");
-		let container = document.querySelector("#popu_podcast");
-
-		podcasts.forEach(podcast => {
-			let klon = template.cloneNode(true).content;
+    }
 
 
-			//				let stream = podcast.streaming
-			//				stream.sort(function(a, b) {
-			//					return b - a;
-			//				});
+    function visPodcasts() {
+        let template = document.querySelector("template");
+        let container = document.querySelector("#popu_podcast");
 
-			klon.querySelector("img").src = podcast.billede.guid;
-			klon.querySelector("div h3").innerHTML = podcast.title.rendered;
-			klon.querySelector("div .kort_info").innerHTML = podcast.kort;
-			klon.querySelector(".pod_article").addEventListener("click", () => {
-				location.href = podcast.link;
-			});
-			container.appendChild(klon);
+        podcasts.forEach(podcast => {
+            let klon = template.cloneNode(true).content;
 
-		});
-	}
 
-	getJson();
+            //				let stream = podcast.streaming
+            //				stream.sort(function(a, b) {
+            //					return b - a;
+            //				});
+
+            klon.querySelector("img").src = podcast.billede.guid;
+            klon.querySelector("div h3").innerHTML = podcast.title.rendered;
+            klon.querySelector("div .kort_info").innerHTML = podcast.kort;
+            klon.querySelector(".pod_article").addEventListener("click", () => {
+                location.href = podcast.link;
+            });
+            container.appendChild(klon);
+
+        });
+    }
+
+    getJson();
 
 </script>
 
@@ -247,15 +173,14 @@ get_header();
 <?php
 /* Start the Loop */
 while ( have_posts() ) :
-	the_post();
-	get_template_part( 'template-parts/content/content-page' );
+the_post();
+get_template_part( 'template-parts/content/content-page' );
 
-	// // If comments are open or there is at least one comment, load up the comment template.
-	// if ( comments_open() || get_comments_number() ) {
-	// 	comments_template();
-	// }
+// // If comments are open or there is at least one comment, load up the comment template.
+// if ( comments_open() || get_comments_number() ) {
+// comments_template();
+// }
 endwhile; // End of the loop.
-
 get_template_part( 'template-parts/footer/player' );
 get_footer();
 

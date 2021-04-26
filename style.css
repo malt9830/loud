@@ -1,8 +1,361 @@
 /*
 Theme Name:		LOUD Theme
 Template:		twentytwentyone
-Version:		1.0.0
+Version:		1.0.1
 Description:	Twenty Twenty-One Child Theme
 Author:			Gruppe 05
 */
 
+/*----------general----------*/
+
+img {
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+#primary {
+    margin-top: 5rem !important;
+    padding: 0 !important;
+}
+
+#main {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+.entry-header {
+    padding-bottom: 0 !important;
+}
+
+/*----------fonts----------*/
+
+h1,
+h2 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 900 !important;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700 !important;
+}
+
+/*----------buttons----------*/
+
+.custom-button {
+    display: inline-block;
+    color: white !important;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-family: Montserrat;
+    font-weight: 700;
+    box-shadow: 4px 4px 0 #000;
+    text-decoration: none !important;
+    margin: 1rem 1.5rem;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: .15s;
+    text-align: center;
+}
+
+.custom-button:hover {
+    box-shadow: 0 0 0;
+    transform: translate(1px, 1px);
+}
+
+/*----------backgrounds----------*/
+
+.bg-red {
+    background: #DB0038 !important;
+    color: white !important;
+}
+
+.bg-peach {
+    background: #F19C7A !important;
+    color: white !important;
+}
+
+.bg-green {
+    background: #588B8B !important;
+    color: white !important;
+}
+
+.bg-yellow {
+    background: #FABA42 !important;
+    color: white !important;
+}
+
+.bg-orange {
+    background: #ED6A1D !important;
+    color: white !important;
+}
+
+.bg-cloud {
+    background: #DADADA !important;
+}
+
+/*----------header----------*/
+
+#masthead {
+    padding: 0;
+    margin: 0;
+    background: #1A202C;
+    width: 100%;
+    max-width: none;
+}
+
+@media (min-width:481px) {
+    #masthead {
+        padding: 0 3rem;
+    }
+}
+
+.primary-navigation-open .menu-button-container {
+    background: #1A202C !important;
+}
+
+.primary-navigation > div > .menu-wrapper > li > .sub-menu li,
+.primary-navigation-open .has-logo.has-title-and-tagline .primary-navigation > .primary-menu-container {
+    background: #1A202C !important;
+}
+
+.primary-navigation .sub-menu {
+    border: none !important;
+}
+
+#site-navigation a {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: white;
+}
+
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle {
+    color: white !important;
+}
+
+.primary-navigation a:hover {
+    text-decoration: none !important;
+}
+
+.site-logo .custom-logo {
+    max-width: 4rem !important;
+}
+
+/*----------footer----------*/
+
+.widget-area a,
+.widget-area a:link,
+.widget-area h5 {
+    text-decoration: none !important;
+    color: white !important;
+}
+
+.site-footer > .site-info {
+    border-color: #F7FAFC !important;
+}
+
+.widget-area a:hover,
+.widget-area a:link:hover {
+    color: white !important;
+}
+
+.widget-area {
+    margin-top: 2rem !important;
+}
+
+.footer-wrapper {
+    background: #1A202C !important;
+}
+
+.site-footer {
+    padding-bottom: 12rem !important;
+}
+
+.fab {
+    font-size: 3.5rem !important;
+    color: white !important;
+    margin: 0 1rem !important;
+}
+
+.singular .entry-header {
+    border-bottom: none !important;
+}
+
+@media only screen and (min-width: 1024px) {
+    .widget-area {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+}
+
+.widget-area > *:nth-child(1) {
+    text-align: center !important;
+}
+
+/*----------podcast-container----------*/
+.container {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+@media (min-width:650px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width:950px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.container article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+article .top {
+    display: grid;
+    grid-template-columns: 3fr 8fr;
+    grid-gap: 0.5rem;
+}
+
+article .top .text h3 {
+    margin: 0;
+}
+
+article .top .text p {
+    line-height: 1.7rem;
+    margin-bottom: 1.3rem;
+}
+
+article .play-button {
+    font-size: 1.3rem;
+}
+
+article .play-button p {
+    display: inline-block;
+}
+
+@media (min-width: 650px) {
+
+    article .top {
+        grid-template-columns: 1fr;
+    }
+
+    article .top .text h3 {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 650px) {
+
+    article .top .text h3 {
+        font-size: 1.1rem;
+    }
+
+    article .top .text p {
+        font-size: 1rem;
+        margin-bottom: 0 !important;
+    }
+
+    article .play-button {
+        text-align: center;
+    }
+}
+
+.podcasts-article {
+    margin-top: 0 !important;
+}
+
+/*----------max-width-control----------*/
+
+.elementor-41 .elementor-element.elementor-element-2488784 > .elementor-container,
+.entry-header {
+    max-width: 1140px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce) {
+    max-width: 1140px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+article {
+    max-width: 1140px;
+}
+
+section {
+    max-width: 1140px !important;
+    margin: 0 1rem !important;
+}
+
+/*.site-main > * {
+    margin: 0 1rem !important;
+}*/
+
+@media (min-width: 1140px) {
+    section {
+        margin: 0 auto !important;
+    }
+
+    .site-main > * {
+        margin: 0 auto !important;
+    }
+}
+
+
+.wp-block-group.has-background .wp-block-group__inner-container > .alignfull {
+    max-width: 1140px !important;
+    width: 100% !important;
+    ;
+    margin: 0 auto !important;
+}
+
+.underrubrik {
+    max-width: 1140px !important;
+    padding: 1rem !important;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width:1140px) {
+    .underrubrik {
+        grid-template-columns: 2fr 1fr;
+        padding: 0 !important;
+    }
+}
+
+.underrubrik .has-text-align-left {
+    padding: 0 !important;
+}
+
+.h2-lab {
+    max-width: 1140px !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+}
+
+@media (max-width: 1140px) {
+    .h2-lab {
+        margin: 1rem !important;
+    }
+}
+
+.entry-header {
+    margin: 1rem !important;
+}
+
+@media (min-width: 1140px) {
+    .entry-header {
+        margin: 0 auto !important;
+    }
+}
