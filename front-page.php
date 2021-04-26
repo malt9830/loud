@@ -24,6 +24,7 @@ get_header();
     #landing-full {
         padding-top: 0;
         margin-top: 0;
+        margin-bottom: -29vw;
     }
 
     #landing {

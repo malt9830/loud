@@ -102,7 +102,7 @@ get_header();
             console.log("looping");
             //Her definerers konstanter til senere brug i kloningen af template
             const template = document.querySelector("template");
-            const container = document.querySelector("#section-podcasts .container");
+            const containerlab = document.querySelector("#section-podcasts .container");
 
             let clone = template.cloneNode(true).content; //Her klones template og udfyldes med data fra json
 
@@ -113,7 +113,7 @@ get_header();
             clone.querySelector("article").addEventListener("click", () => {
                 location.href = podcast.link;
             });
-            container.appendChild(clone); //Klonerne tilføres til DOM
+            containerlab.appendChild(clone); //Klonerne tilføres til DOM
 
         })
     }
