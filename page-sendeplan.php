@@ -26,7 +26,7 @@ endwhile; // End of the loop.
 <div id="sendeplan_container">
 
 <div id="mandag" class="dag collapsible">
-<p>Mandag</p>
+<h3>Mandag</h3>
 <p class="dato_container"></p>
 </div>
 <div class="dagsplan content">
@@ -117,7 +117,9 @@ endwhile; // End of the loop.
 
 </div>
 
-<div id="tirsdag" class="dag collapsible">Tirsdag</div>
+<div id="tirsdag" class="dag collapsible">
+    <h3>Tirsdag</h3>
+</div>
 <div class="dagsplan content">
     
 <article>
@@ -205,7 +207,9 @@ endwhile; // End of the loop.
         </article>
     </div>
 
-<div id="onsdag" class="dag collapsible">Onsdag</div>
+<div id="onsdag" class="dag collapsible">
+    <h3>Onsdag</h3>
+</div>
     <div class="dagsplan content">
     
 <article>
@@ -293,7 +297,9 @@ endwhile; // End of the loop.
         </article>
     </div>
 
-<div id="torsdag" class="dag collapsible">Torsdag</div>
+<div id="torsdag" class="dag collapsible">
+    <h3>Torsdag</h3>
+    </div>
     <div class="dagsplan content">
     
 <article>
@@ -381,7 +387,8 @@ endwhile; // End of the loop.
         </article>
     </div>
 
-<div id="fredag" class="dag collapsible">Fredag</div>
+<div id="fredag" class="dag collapsible">
+    <h3>Fredag </h3></div>
     <div class="dagsplan content">
     
 <article>
@@ -469,7 +476,8 @@ endwhile; // End of the loop.
         </article>
     </div>
 
-<div id="loerdag" class="dag collapsible">Lørdag</div>
+<div id="loerdag" class="dag collapsible">
+<h3>Lørdag </h3></div>
     <div class="dagsplan content">
 <article>
     <div class="tidspunkt">07:00</div>
@@ -557,7 +565,8 @@ endwhile; // End of the loop.
 
 </div>
 
-<div id="soendag" class="dag collapsible">Søndag</div>
+<div id="soendag" class="dag collapsible">
+<h3>Søndag </h3></div>
     <div class="dagsplan content">
     
 <article>
@@ -654,6 +663,12 @@ endwhile; // End of the loop.
 
 <style>
 
+.alg_back_button_input {
+    margin-top: -13.5rem;
+    margin-left: -1rem;
+}
+
+
 /*** styling af header ***/
 #primary{
     margin-top:0;
@@ -665,16 +680,6 @@ margin: 0 auto;
 padding:0;
 }
 
-.singular .entry-title{
-    font-family: Montserrat;
-    font-weight: 900;
-    font-size:1.8rem;
-}
-
-#post-40{
-    margin-bottom:0;
-}
-
 .site-main article .entry-footer {
     margin-top: 0;
     padding-top: 0;
@@ -682,16 +687,6 @@ padding:0;
     border-bottom:none;
 }
 
-.entry-content{
-    font-size:.8rem;
-    letter-spacing: .05rem;
-    color:black;
-    }
-
-.entry-content p{
-    color:black;
-    font-family: Montserrat;
-}
 
 
 /*** style sendeplan container ***/
@@ -709,6 +704,8 @@ padding:0;
     letter-spacing:.2rem;
     text-transform:uppercase;
     text-align:left;
+    display: flex;
+    justify-content: space-between;
 }
 
 .active, .dag:hover{
@@ -839,6 +836,10 @@ content: none;
     box-shadow: 8px 3px 0px -3px #6b6b6b;
     margin-top:0;
     border:none;
+}
+
+.active h3{
+    color:white;
 }
 
 .active:after{
