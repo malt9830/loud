@@ -60,10 +60,10 @@ get_header();
 	#kategorier {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-gap: 1.3rem;
+		grid-gap: 1rem;
 	}
 
-	#kategorier button {
+	#kategorier a {
 		margin: 0 !important;
 		height: 5rem;
 		text-align: left;
@@ -71,30 +71,32 @@ get_header();
 		padding-left: 10px;
 	}
 
-	#kategorier button:nth-child(1) {
+	#kategorier a:nth-child(1) {
 		background: #DB0038 !important;
 	}
 
-	#kategorier button:nth-child(2),
-	#kategorier button:nth-child(4) {
+	#kategorier a:nth-child(2),
+	#kategorier a:nth-child(4) {
 		background: #ED6A1D !important;
 	}
 
-	#kategorier button:nth-child(3),
-	#kategorier button:nth-child(7),
-	#kategorier button:nth-child(10) {
+	#kategorier a:nth-child(3),
+	#kategorier a:nth-child(7),
+	#kategorier a:nth-child(10) {
 		background: #F19C7A !important;
 	}
 
-	#kategorier button:nth-child(5),
-	#kategorier button:nth-child(8) {
+	#kategorier a:nth-child(5),
+	#kategorier a:nth-child(8) {
 		background: #FABA42 !important;
 	}
 
-	#kategorier button:nth-child(6),
-	#kategorier button:nth-child(9) {
+	#kategorier a:nth-child(6),
+	#kategorier a:nth-child(9) {
 		background: #588B8B !important;
 	}
+
+	.custom-button {}
 
 	/*-----------mobil-----------*/
 
@@ -123,29 +125,6 @@ get_header();
 	</article>
 </template>
 
-<!--
-<section>
-	<main class="pod_main">
-		<h1>PODCAST</h1>
-		<h2>Populære podcasts</h2>
-		<div class="popu_podcast"></div>
-		<h2>Kategorier</h2>
-		<div class="kategorier">
-			<button type="button" id="alle">Alle</button>
-			<button type="button" id="crime">True crime</button>
-			<button type="button" id="kultur">Samfund/ Kultur</button>
-			<button type="button" id="politik">Nyheder/ Politik</button>
-			<button type="button" id="musik">Musik</button>
-			<button type="button" id="komedie">Komedie</button>
-			<button type="button" id="business">Business</button>
-			<button type="button" id="livsstil">Livsstil</button>
-			<button type="button" id="indad">Kig indad</button>
-			<button type="button" id="kunst">Kunst</button>
-
-		</div>
-	</main>
-</section>
--->
 
 <script>
 	let podcasts;
@@ -173,18 +152,7 @@ get_header();
 
 		});
 
-		//		addEventListenersToButtons();
-
 	}
-
-	//	function addEventListenersToButtons() {
-	//		document.querySelectorAll("#kategorier button").forEach(elm => {
-	//			elm.addEventListener("click", () => {
-	//				location.href = elm.link;
-	//			});
-	//			console.log(elm.link)
-	//		})
-	//	}
 
 
 	function visPodcasts() {
