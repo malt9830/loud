@@ -90,26 +90,18 @@ get_header();
 
     iframe {
         margin: 0 auto !important;
-        width: 70% !important;
-        min-width: 70% !important;
-    }
-
-    @media (min-width: 700px) {
-        #section-feed .container-feed {
-            grid-template-columns: repeat(2, 1fr);
-        }
+        min-width: 18rem !important;
     }
 
     @media (min-width: 1050px) {
         #section-feed .container-feed {
+            display: grid;
             grid-template-columns: repeat(3, 1fr);
             overflow-x: auto;
             white-space: normal;
         }
 
-        iframe {
-            width: 100%;
-        }
+        iframe {}
     }
 
     /*------------infografik------------*/

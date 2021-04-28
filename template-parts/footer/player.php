@@ -22,14 +22,11 @@
         margin: 0.5rem;
     }
 
-    .bottom-player-left {
-        display: grid;
-        grid-gap: 0.5rem;
-    }
-
+    .bottom-player-left,
     .bottom-player-right {
         display: grid;
         grid-gap: 0.5rem;
+        align-content: center
     }
 
     .bottom-player-text {
@@ -57,7 +54,7 @@
     .bottom-player-middle {
         display: grid;
         grid-template-columns: 1fr 7fr;
-        grid-gap: 1.3rem;
+        grid-gap: 0.5rem;
         align-items: center;
     }
 
@@ -65,7 +62,7 @@
 
     .bottom-player .fas,
     .bottom-player .far {
-        font-size: 2rem;
+        font-size: 1.5rem;
         align-self: center;
         color: #1A202C;
         vertical-align: middle;
@@ -77,7 +74,7 @@
 
     .bottom-player .bar-container {
         position: relative;
-        height: 1rem;
+        height: 0.5rem;
         border-radius: 1rem;
     }
 
@@ -112,17 +109,11 @@
         font-size: 0.7rem;
     }
 
-    .bottom-player-drag {
-        text-align: center;
-    }
-
-    .fa-chevron-up {
-        font-size: 1.3rem;
-    }
 
     @media (min-width: 1000px) {
         .bottom-player {
             padding: 0 1.5rem;
+            transform: translateY(54%);
         }
 
         .bottom-player-box {
@@ -177,16 +168,12 @@
         .bottom-player .bar-text {
             display: none;
         }
-
-        .bottom-player-drag {
-            display: none;
-        }
     }
 
-    /*-------------potentiel_skjult_ting----------*/
+    /*-------------hidden-info----------*/
 
     .bottom-player {
-        transform: translateY(60%);
+        transform: translateY(67%);
         transition-duration: 0.15s;
         transition-timing-function: ease-in;
     }
@@ -201,11 +188,14 @@
         transition-timing-function: ease-in;
     }
 
+    @media (min-width: 1000px) {
+        .bottom-player {
+            transform: translateY(54%);
+        }
+    }
+
 </style>
 <div class="bottom-player" draggable="true">
-    <div class="bottom-player-drag">
-        <i class="fas fa-chevron-up"></i>
-    </div>
     <div class="bottom-player-content">
         <div class="bottom-player-box bottom-player-left">
             <div class="bottom-player-image">
@@ -223,7 +213,7 @@
             </div>
             <p class="player-timer">20:31</p>
             <div class="bar-display">
-                <p class="bar-text">LIGE NU: Spejlet med Liva Manghezi</p>
+                <p class="bar-text">LIGE NU: Spejlet</p>
                 <div class="bar-container">
                     <div class="full-bar"></div>
                     <div class="half-bar"></div>
