@@ -8,6 +8,8 @@ Author:			Gruppe 05
 
 /*----------general----------*/
 
+
+
 img {
     width: 100%;
 }
@@ -42,7 +44,7 @@ h1 {
 }
 
 main h1 {
-    padding-bottom: 20px;
+    padding: 45px 0 35px;
 }
 
 h2,
@@ -160,8 +162,8 @@ p {
     background: #1A202C !important;
 }
 
-.primary-navigation>div>.menu-wrapper>li>.sub-menu li,
-.primary-navigation-open .has-logo.has-title-and-tagline .primary-navigation>.primary-menu-container {
+.primary-navigation > div > .menu-wrapper > li > .sub-menu li,
+.primary-navigation-open .has-logo.has-title-and-tagline .primary-navigation > .primary-menu-container {
     background: #1A202C !important;
 }
 
@@ -175,7 +177,7 @@ p {
     color: white;
 }
 
-.primary-navigation>div>.menu-wrapper .sub-menu-toggle {
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle {
     color: white !important;
 }
 
@@ -184,7 +186,7 @@ p {
 }
 
 .site-logo .custom-logo {
-    max-width: 4rem !important;
+    max-width: 3rem !important;
 }
 
 /*----------footer----------*/
@@ -196,7 +198,7 @@ p {
     color: white !important;
 }
 
-.site-footer>.site-info {
+.site-footer > .site-info {
     border-color: #F7FAFC !important;
 }
 
@@ -233,7 +235,7 @@ p {
     }
 }
 
-.widget-area>*:nth-child(1) {
+.widget-area > *:nth-child(1) {
     text-align: center !important;
 }
 
@@ -253,6 +255,12 @@ p {
     padding-top: 10px;
 }
 
+
+/*----- kategori-sektion-----*/
+
+#section-podcasts h2 {
+    padding: 35px 0 10px;
+}
 
 
 /*----------podcast-container----------*/
@@ -370,14 +378,14 @@ article .play-button p {
 
 /*----------max-width-control----------*/
 
-.elementor-41 .elementor-element.elementor-element-2488784>.elementor-container,
+.elementor-41 .elementor-element.elementor-element-2488784 > .elementor-container,
 .entry-header {
     max-width: 1140px !important;
     margin-right: auto !important;
     margin-left: auto !important;
 }
 
-.entry-content>*:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce) {
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce) {
     max-width: 1140px !important;
     margin-right: auto !important;
     margin-left: auto !important;
@@ -401,13 +409,13 @@ section {
         margin: 0 auto !important;
     }
 
-    .site-main>* {
+    .site-main > * {
         margin: 0 auto !important;
     }
 }
 
 
-.wp-block-group.has-background .wp-block-group__inner-container>.alignfull {
+.wp-block-group.has-background .wp-block-group__inner-container > .alignfull {
     max-width: 1140px !important;
     width: 100% !important;
     ;

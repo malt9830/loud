@@ -200,28 +200,6 @@ get_header();
         margin-top: 3rem;
     }
 
-    /*----------header-ting---------*/
-
-    .site-logo .custom-logo {
-        max-width: 3rem !important;
-    }
-
-    .menu-button-container #primary-mobile-menu .dropdown-icon.open .svg-icon {
-        top: 0 !important;
-    }
-
-    .open svg,
-    .close svg {
-        width: 48px !important;
-        height: 48px !important;
-    }
-
-    @media only screen and (max-width: 481px) {
-        body:not(.primary-navigation-open) .site-header.has-logo.has-title-and-tagline .menu-button-container {
-            margin-top: 0 !important;
-        }
-    }
-
 </style>
 
 <div id="landing-full">
