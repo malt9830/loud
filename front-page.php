@@ -93,8 +93,13 @@ get_header();
         #section-feed .container-feed {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            overflow-x: auto;
+            overflow-x: visible;
             white-space: normal;
+            grid-gap: 1rem;
+        }
+
+        iframe {
+            margin: 1rem 0;
         }
     }
 
