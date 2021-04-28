@@ -17,57 +17,54 @@ get_header();
 
     .site-main>* {
         max-width: none !important;
+        margin: 0 !important;
     }
 
     /*------------landing------------*/
 
-    #landing-full {
-        padding-top: 0;
-        margin-top: 0;
-        margin-bottom: -29vw;
-    }
-
     #landing {
-        width: 100%;
-        height: 80vh;
+        position: relative;
     }
 
-    #splash {
-        background-image: url(http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/splash.png);
-        background-size: cover;
-        background-position: 50% 50%;
-        max-width: none;
-        width: 100%;
-        height: 80vh;
+    #landing-full {
+        margin: 0 !important;
+    }
+
+    #splash-desktop {
+        display: none;
     }
 
     #landing-text {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        padding: 1rem;
-
-        /*box*/
-        background: rgba(100, 10, 10, 0.7);
-        border-radius: 2rem;
-        color: white;
+        transform: translateX(-50%);
+        width: 80vw !important;
     }
 
-    #landing-text-top h1 {
-        font-size: 5rem !important;
-        padding: 0;
+    #landing-text .custom-button {
+        width: 100% !important;
+        margin: 1rem 0 !important;
     }
 
-    #landing-text-top .custom-button {
-        margin: 0.5rem !important;
-    }
+    @media (min-width: 900px) {
+        #splash-mobile {
+            display: none;
+        }
 
-    @media (max-width: 600px) {
-        #splash {
-            width: 100%;
-            height: 75vh;
+        #splash-desktop {
+            display: block;
+        }
+
+        #landing-text {
+            top: 50%;
+            left: 55%;
+            transform: translate(-25%, -50%);
+            width: 30rem !important;
+        }
+
+        #landing-text .custom-button {
+            font-size: 2rem !important;
         }
     }
 
@@ -194,16 +191,11 @@ get_header();
 
 <div id="landing-full">
     <div id="landing">
-        <div id="splash">
-        </div>
+        <img id="splash-desktop" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/loud_splash_new_web_2.png" alt="splash image for desktop">
+        <img id="splash-mobile" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/loud_splash_new_mobile.png" alt="splash image for mobile">
         <div id="landing-text">
-            <div id="landing-text-top">
-                <h1>LOUD</h1>
-            </div>
-            <div id="landing-text-bottom">
-                <a class="custom-button bg-red">LYT LIVE</a>
-                <a class="custom-button bg-peach" href="/kea/loud/wordpress/podcasts/">PODCASTS</a>
-            </div>
+            <a class="custom-button bg-peach">LYT LIVE</a>
+            <a class="custom-button bg-yellow" href="/kea/loud/wordpress/podcasts/">PODCASTS</a>
         </div>
     </div>
 </div>
