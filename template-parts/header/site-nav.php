@@ -27,8 +27,8 @@
 
     .open svg,
     .close svg {
-        width: 5rem;
-        height: 5rem;
+        width: 48px !important;
+        height: 48px !important;
         color: white;
     }
 
@@ -37,10 +37,18 @@
         padding-top: 0;
     }
 
+    .menu-button-container #primary-mobile-menu .dropdown-icon.open .svg-icon {
+        top: 0 !important;
+    }
+
 
     @media only screen and (max-width: 481px) {
         .admin-bar .has-logo.has-title-and-tagline .primary-navigation>.primary-menu-container {
             top: 5rem;
+        }
+
+        body:not(.primary-navigation-open) .site-header.has-logo.has-title-and-tagline .menu-button-container {
+            margin-top: 0 !important;
         }
     }
 
