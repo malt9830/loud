@@ -72,7 +72,6 @@ get_header();
 
     #section-feed .container-feed {
         display: flex;
-        grid-gap: 1rem;
         overflow-x: scroll;
         white-space: nowrap;
     }
@@ -86,7 +85,7 @@ get_header();
     }
 
     iframe {
-        margin: 0 auto !important;
+        margin: 0.5rem !important;
         min-width: 18rem !important;
     }
 
