@@ -56,9 +56,9 @@ get_header();
         color: white;
     }
 
-    #landing-text-top h1 {
+    /* #landing-text-top h1 {
         margin-bottom: 3rem;
-    }
+    } */
 
     @media (max-width: 600px) {
         #splash {

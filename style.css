@@ -8,6 +8,8 @@ Author:			Gruppe 05
 
 /*----------general----------*/
 
+
+
 img {
     width: 100%;
 }
@@ -42,7 +44,7 @@ h1 {
 }
 
 main h1 {
-    padding-bottom: 20px;
+    padding: 45px 0 35px;
 }
 
 h2,
@@ -253,6 +255,12 @@ p {
     padding-top: 10px;
 }
 
+
+/*----- kategori-sektion-----*/
+
+#section-podcasts h2 {
+    padding: 35px 0 10px;
+}
 
 
 /*----------podcast-container----------*/
