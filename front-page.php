@@ -143,7 +143,60 @@ get_header();
         padding: 2rem 0;
     }
 
+    /*-----------tilbage til top knap------------*/
+    #backtotop {
+        display: none;
+        /* Hidden by default. display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them. Take a look at our last example on this page if you want to know how this can be achieved.The <script> element uses display: none; as default.  */
+        position: fixed;
+        bottom: 115px;
+        right: 22px;
+        z-index: 99;
+        border: 3px solid;
+        outline: none;
+        background-color: transparent;
+        color: #1A202C;
+        cursor: pointer;
+        padding: 0px;
+        border-radius: 5px;
+        font-size: 30px;
+    }
+
+    #become-background {
+        height: 100vh;
+        width: 100%;
+        background: url(http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/lydfabrik.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    @media (min-width: 650px) {
+        #become-background {
+            height: 50vh;
+        }
+    }
+
+    #become-text {
+        position: absolute;
+        text-align: center;
+        left: 50%;
+        top: 45%;
+        transform: translateX(-50%);
+        min-width: 20rem;
+        max-width: 35rem;
+    }
+
+    #become-text h3 {
+        font-size: 2rem !important;
+    }
+
+    #become-text .custom-button {
+        margin-top: 3rem;
+    }
+
 </style>
+
 <div id="landing-full">
     <div id="landing">
         <div id="splash">
@@ -159,6 +212,10 @@ get_header();
         </div>
     </div>
 </div>
+
+<button onclick="topFunction()" id="backtotop" title="Go to top">&#9757;
+</button>
+
 <div class="bg-yellow">
     <section id="section-feed" class="section-padding">
         <h2>LOUDs feed</h2>
@@ -325,6 +382,13 @@ get_header();
         </div>
     </section>
 </div>
+<div id="become-background">
+    <div id="become-text">
+        <h3>Vil du gerne være podcaster?</h3>
+        <h4>I LOUD LAB, får DU mikrofonen, friheden og muligheden for at sammen med andre unge lave jeres helt eget podcast</h4>
+        <a href="http://malthekusk.one/kea/loud/wordpress/loud-lab/" class="custom-button bg-red">JOIN LOUD LAB</a>
+    </div>
+</div>
 <div class="bg-cloud">
     <section id="section-partners" class="section-padding">
         <h2>LOUD-partnere</h2>
@@ -479,6 +543,29 @@ get_header();
                 container.appendChild(clone); //Klonerne tilføres til DOM
             }
         })
+    }
+
+    /*--------------back to top knap-----------*/
+
+    // Når brugeren scroller ned 600px fra toppen af sitet, vis knap
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+
+    function scrollFunction() {
+        console.log("scrollFunction");
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            document.querySelector("#backtotop").style.display = "block";
+        } else {
+            document.querySelector("#backtotop").style.display = "none";
+        }
+    }
+
+    // når brugeren klikker, kommer de tilbage til toppen af sitet
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE og Opera
     }
 
 </script>
