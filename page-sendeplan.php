@@ -40,9 +40,9 @@ endwhile; // End of the loop.
     <article>
         <p class="podcast">eventyr</h3>
         <p class="dato">1 apr 19</p>
-        <p class="tid">1 t. og 30 min.</p>
-        <p class="beskrivelse">kort beskrivelse af podcast</p>
-        <p class="genre">genre goes here</p>
+        <p class="tid">1 t.</p>
+        <p class="beskrivelse">Lad dig forføre og fortrylle af Gunvor Bjerres fløjlsbløde stemme, når hun uge efter uge læser de bedste eventyr op. </p>
+        <p class="genre">Kunst</p>
         </article>
 
 <article>
@@ -55,12 +55,12 @@ endwhile; // End of the loop.
         <p class="podcast">historier fra historien</h3>
         <p class="dato">1 apr 19</p>
         <p class="tid">1 t. og 30 min.</p>
-        <p class="beskrivelse">kort beskrivelse af podcast</p>
-        <p class="genre">genre goes here</p>
+        <p class="beskrivelse">Et Danmarkshistorisk podcast om små og store fortællinger fra vores fælles fortid, som du måske ikke har hørt endnu.</p>
+        <p class="genre">Samfund og kultur</p>
         </article>
 
 <article>
-    <div class="tidspunkt">09:00</div>
+    <div class="tidspunkt">09:30</div>
 </article>
 <article>
         <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/5309cef706ec8037c817ff366d8545a9.jpg" alt="">
@@ -69,12 +69,12 @@ endwhile; // End of the loop.
         <p class="podcast">kontur</h3>
         <p class="dato">1 apr 19</p>
         <p class="tid">1 t. og 30 min.</p>
-        <p class="beskrivelse">kort beskrivelse af podcast</p>
-        <p class="genre">genre goes here</p>
+        <p class="beskrivelse">Kontur dykker hver uge dybt ned i en aktuel kunstner på den danske eller internationale musikscene. </p>
+        <p class="genre">Musik</p>
         </article>
 
 <article>
-    <div class="tidspunkt">10:00</div>
+    <div class="tidspunkt">11:00</div>
 </article>
 <article>
         <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/29214f6b82f68b73c3ed1245cd1ae043.jpg" alt="">
@@ -83,12 +83,12 @@ endwhile; // End of the loop.
         <p class="podcast">george floyd</h3>
         <p class="dato">1 apr 19</p>
         <p class="tid">1 t. og 30 min.</p>
-        <p class="beskrivelse">kort beskrivelse af podcast</p>
-        <p class="genre">genre goes here</p>
+        <p class="beskrivelse">Black Lives Matters fik i den grad en verdensomspændende revival i forbindelse med George Floyds brutale død, og mennesker over hele verden gik på gaden i sympati.</p>
+        <p class="genre">Samfund og kultur</p>
         </article>
     
 <article>
-    <div class="tidspunkt">11:00</div>
+    <div class="tidspunkt">12:30</div>
 </article>
 <article>
         <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/76e57dc37ceac22bf02348623497b5ff-scaled.jpg" alt="">
@@ -96,13 +96,13 @@ endwhile; // End of the loop.
     <article>
         <p class="podcast">hvad i alverden</h3>
         <p class="dato">1 apr 19</p>
-        <p class="tid">1 t. og 30 min.</p>
-        <p class="beskrivelse">kort beskrivelse af podcast</p>
-        <p class="genre">genre goes here</p>
+        <p class="tid">1 t.</p>
+        <p class="beskrivelse">I Hvad I Alverden tager vi aktuelle samfundsbegivenheder op og spørger helt grundlæggende: Hvad foregår der, og hvorfor er det vigtigt?</p>
+        <p class="genre">Samfund og kultur</p>
         </article>
         
 <article>
-    <div class="tidspunkt">12:00</div>
+    <div class="tidspunkt">13:30</div>
 </article>
 <article>
         <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/712a88c8f4d301bcd856c500c4bf5bca.jpg" alt="">
@@ -111,8 +111,8 @@ endwhile; // End of the loop.
         <p class="podcast">klub podcast</h3>
         <p class="dato">1 apr 19</p>
         <p class="tid">1 t. og 30 min.</p>
-        <p class="beskrivelse">kort beskrivelse af podcast</p>
-        <p class="genre">genre goes here</p>
+        <p class="beskrivelse">Velkommen til KLUB Podcast. Her kan du mæske dig i lun kultur direkte fra køkkenet. Der er ingen smalle steder, kun stor lyd og store oplevelser.</p>
+        <p class="genre">Samfund og kultur</p>
         </article>
 
 </div>
@@ -132,12 +132,12 @@ endwhile; // End of the loop.
         <p class="podcast">det gode selskab</h3>
         <p class="dato">1 apr 19</p>
         <p class="tid">1 t. og 30 min.</p>
-        <p class="beskrivelse">kort beskrivelse af podcast</p>
-        <p class="genre">genre goes here</p>
+        <p class="beskrivelse">De gode venner, Emil Kondrup og Kristoffer Bonde, har intet tilfælles ud over at de elsker den gode stemning.</p>
+        <p class="genre">Komedie</p>
         </article>
 
 <article>
-    <div class="tidspunkt">08:00</div>
+    <div class="tidspunkt">08:30</div>
 </article>
 <article>
         <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/80981ad443e4adda320b01394eebc9d3.jpg" alt="">
@@ -146,12 +146,12 @@ endwhile; // End of the loop.
         <p class="podcast">freundschaft</h3>
         <p class="dato">1 apr 19</p>
         <p class="tid">1 t. og 30 min.</p>
-        <p class="beskrivelse">kort beskrivelse af podcast</p>
-        <p class="genre">genre goes here</p>
+        <p class="beskrivelse">Hos Ida-Sophia og Lasse er du med som fluen på væggen i en telefonsamtale mellem to gode venner. </p>
+        <p class="genre">Komedie</p>
         </article>
 
 <article>
-    <div class="tidspunkt">09:00</div>
+    <div class="tidspunkt">10:00</div>
 </article>
 <article>
         <img class="billede" src="https://is2-ssl.mzstatic.com/image/thumb/Podcasts124/v4/52/3c/04/523c0435-e709-f848-2a1a-75fc5289903a/mza_17019287945696966019.jpg/1200x1200bb.jpg" alt="">
@@ -159,13 +159,13 @@ endwhile; // End of the loop.
     <article>
         <p class="podcast">spejlet</h3>
         <p class="dato">1 apr 19</p>
-        <p class="tid">1 t. og 30 min.</p>
-        <p class="beskrivelse">kort beskrivelse af podcast</p>
-        <p class="genre">genre goes here</p>
+        <p class="tid">1 t. </p>
+        <p class="beskrivelse">Vi ser det samme spejlbillede igen og igen i små øjeblikke af få sekunder eller lidt mere. Men hvad sker der, hvis vi tager os tid til at se os selv i spejlet?</p>
+        <p class="genre">Livsstil</p>
         </article>
 
 <article>
-    <div class="tidspunkt">10:00</div>
+    <div class="tidspunkt">11:00</div>
 </article>
 <article>
         <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/0805a073993d556284e3aacb34853240.jpg" alt="">
@@ -173,27 +173,27 @@ endwhile; // End of the loop.
     <article>
         <p class="podcast">bibelklubben</h3>
         <p class="dato">1 apr 19</p>
-        <p class="tid">1 t. og 30 min.</p>
-        <p class="beskrivelse">kort beskrivelse af podcast</p>
-        <p class="genre">genre goes here</p>
+        <p class="tid">1 t.</p>
+        <p class="beskrivelse">kLivet som ung kan være opslidende. For er jeg overhovedet god nok, som jeg er? Og hvem holder egentlig af mig? Disse tanker kan fylde så meget, at man nogle gange kan have svært ved at få luft. </p>
+        <p class="genre">Livsstil</p>
         </article>
     
 <article>
-    <div class="tidspunkt">11:00</div>
+    <div class="tidspunkt">12:00</div>
 </article>
 <article>
         <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/ddd628611c7a1698785ded87e5d35650.jpg" alt="">
     </article>
     <article>
-        <p class="podcast">skongeriget</h3>
+        <p class="podcast">kongeriget</h3>
         <p class="dato">1 apr 19</p>
         <p class="tid">1 t. og 30 min.</p>
-        <p class="beskrivelse">kort beskrivelse af podcast</p>
-        <p class="genre">genre goes here</p>
+        <p class="beskrivelse">Kongeriget er stedet, hvor nyheder bliver til en samtale. </p>
+        <p class="genre">Nyhder og politik</p>
         </article>
         
 <article>
-    <div class="tidspunkt">12:00</div>
+    <div class="tidspunkt">13:30</div>
 </article>
 <article>
         <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/54c77aba2c4a08ecdb3625c5818115bc.jpg" alt="">
@@ -202,8 +202,8 @@ endwhile; // End of the loop.
         <p class="podcast">de unge ved verdens ende</h3>
         <p class="dato">1 apr 19</p>
         <p class="tid">1 t. og 30 min.</p>
-        <p class="beskrivelse">kort beskrivelse af podcast</p>
-        <p class="genre">genre goes here</p>
+        <p class="beskrivelse">Det er de færreste, som har en idé om, hvilket liv den unge grønlænder lever. Men i dette program kan du få et øjebliksbillede på den grønlandske ungdom.</p>
+        <p class="genre">Samfund og kultur</p>
         </article>
     </div>
 
