@@ -100,8 +100,6 @@ get_header();
             overflow-x: auto;
             white-space: normal;
         }
-
-        iframe {}
     }
 
     /*------------infografik------------*/

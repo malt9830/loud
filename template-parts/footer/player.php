@@ -182,16 +182,16 @@
         margin: 1rem;
     }
 
-    .slide {
-        transform: translateY(0%);
-        transition-duration: 0.15s;
-        transition-timing-function: ease-in;
-    }
-
     @media (min-width: 1000px) {
         .bottom-player {
             transform: translateY(54%);
         }
+    }
+
+    .slide {
+        transform: translateY(0%);
+        transition-duration: 0.15s;
+        transition-timing-function: ease-in;
     }
 
 </style>
@@ -239,29 +239,6 @@
         console.log(window.innerWidth);
 
         document.querySelector(".bottom-player").addEventListener("click", slideUp);
-        /*
-                //Add event listener kun hvis skærmbredden er mindre end 1000px
-                if (window.innerWidth < 1000) {
-                    console.log("hiddenAvailable");
-                    document.querySelector(".bottom-player").addEventListener("click", slideUp);
-                }
-
-                //Tjek hver gang skærmen ændres om den er under 1000px for at kunne enten tilføje eller fjerne event listeners
-                window.addEventListener("resize", () => {
-                    if (window.innerWidth < 1000) {
-                        console.log("hiddenAvailable");
-                        document.querySelector(".bottom-player").addEventListener("click", slideUp);
-                    } else {
-                        console.log("hiddenUnavailable");
-                        document.querySelector(".bottom-player").removeEventListener("click", slideUp);
-
-                        //Slide ned hvis man gør vinduet breddere mens slideren var oppe
-                        if (document.querySelector(".bottom-player-drag i").classList.contains("fa-chevron-down")) {
-                            console.log("startSlideDown");
-                            slideDown();
-                        }
-                    }
-                })*/
     })
 
     function slideUp() {
@@ -272,10 +249,6 @@
         //Byt om event listeners
         document.querySelector(".bottom-player").removeEventListener("click", slideUp);
         document.querySelector(".bottom-player").addEventListener("click", slideDown);
-
-        //Byt om på pilene
-        document.querySelector(".fa-chevron-up").classList.add("fa-chevron-down");
-        document.querySelector(".fa-chevron-up").classList.remove("fa-chevron-up");
     }
 
     function slideDown() {
@@ -286,10 +259,6 @@
         //Byt om event listeners
         document.querySelector(".bottom-player").removeEventListener("click", slideDown);
         document.querySelector(".bottom-player").addEventListener("click", slideUp);
-
-        //Byt om på pilene
-        document.querySelector(".fa-chevron-down").classList.add("fa-chevron-up");
-        document.querySelector(".fa-chevron-down").classList.remove("fa-chevron-down");
     }
 
 </script>
