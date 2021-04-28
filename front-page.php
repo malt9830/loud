@@ -47,17 +47,21 @@ get_header();
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+        padding: 1rem;
 
         /*box*/
         background: rgba(100, 10, 10, 0.7);
-        width: 300px;
-        height: 350px;
-        border-radius: 30px;
+        border-radius: 2rem;
         color: white;
     }
 
     #landing-text-top h1 {
-        margin-bottom: 3rem;
+        font-size: 5rem !important;
+        padding: 0;
+    }
+
+    #landing-text-top .custom-button {
+        margin: 0.5rem !important;
     }
 
     @media (max-width: 600px) {
@@ -67,18 +71,13 @@ get_header();
         }
     }
 
-    @media (min-width: 600px) {
-        #landing-text {
-            width: 505px !important;
-            height: 270px !important;
-        }
-    }
-
     /*------------feed------------*/
 
     #section-feed .container-feed {
-        display: grid;
+        display: flex;
         grid-gap: 1rem;
+        overflow-x: scroll;
+        white-space: nowrap;
     }
 
     #section-feed .custom-button {
@@ -91,6 +90,8 @@ get_header();
 
     iframe {
         margin: 0 auto !important;
+        width: 70% !important;
+        min-width: 70% !important;
     }
 
     @media (min-width: 700px) {
@@ -102,6 +103,12 @@ get_header();
     @media (min-width: 1050px) {
         #section-feed .container-feed {
             grid-template-columns: repeat(3, 1fr);
+            overflow-x: auto;
+            white-space: normal;
+        }
+
+        iframe {
+            width: 100%;
         }
     }
 
@@ -130,8 +137,6 @@ get_header();
         margin-top: 2.5rem;
         margin-bottom: 2.5rem;
     }
-
-
 
     /*------------partners------------*/
 
@@ -195,6 +200,28 @@ get_header();
         margin-top: 3rem;
     }
 
+    /*----------header-ting---------*/
+
+    .site-logo .custom-logo {
+        max-width: 3rem !important;
+    }
+
+    .menu-button-container #primary-mobile-menu .dropdown-icon.open .svg-icon {
+        top: 0 !important;
+    }
+
+    .open svg,
+    .close svg {
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+    @media only screen and (max-width: 481px) {
+        body:not(.primary-navigation-open) .site-header.has-logo.has-title-and-tagline .menu-button-container {
+            margin-top: 0 !important;
+        }
+    }
+
 </style>
 
 <div id="landing-full">
@@ -207,7 +234,7 @@ get_header();
             </div>
             <div id="landing-text-bottom">
                 <a class="custom-button bg-red">LYT LIVE</a>
-                <a class="custom-button bg-peach" href="/kea/loud/wordpress/podcasts/">HØR PODCASTS</a>
+                <a class="custom-button bg-peach" href="/kea/loud/wordpress/podcasts/">PODCASTS</a>
             </div>
         </div>
     </div>
