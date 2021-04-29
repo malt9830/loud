@@ -39,6 +39,10 @@ get_header();
         }
     }
 
+    .wp-block-columns .wp-block-column>* {
+        margin-bottom: 0 !important;
+    }
+
 </style>
 
 <template>

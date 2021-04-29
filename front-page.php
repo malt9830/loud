@@ -198,7 +198,7 @@ get_header();
         <img id="splash-desktop" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/loud_splash_new_web_2.png" alt="splash image for desktop">
         <img id="splash-mobile" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/loud_splash_new_mobile.png" alt="splash image for mobile">
         <div id="landing-text">
-            <a class="custom-button bg-peach">LYT LIVE</a>
+            <a href="/kea/loud/wordpress/podcasts" class="custom-button bg-peach">LYT LIVE</a>
             <a class="custom-button bg-yellow" href="/kea/loud/wordpress/podcasts/">PODCASTS</a>
         </div>
     </div>

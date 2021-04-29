@@ -95,6 +95,7 @@ p {
     transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     transition-duration: .15s;
     text-align: center;
+    cursor: pointer;
 }
 
 .custom-button:hover {
