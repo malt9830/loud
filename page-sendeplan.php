@@ -35,7 +35,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">07:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/154c2eed9bfce206921a83c7b18e874b.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/eventyr-2.jpg" alt="eventyr podcast">
     </article>
     <article>
         <p class="podcast">eventyr</h3>
@@ -49,7 +49,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">08:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/b36e79a05f2ec82e77315ffa5226c116.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/historierfrahistorien-2.jpg" alt="historier fra historien podcast">
     </article>
     <article>
         <p class="podcast">historier fra historien</h3>
@@ -63,7 +63,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">09:30</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/5309cef706ec8037c817ff366d8545a9.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/kontur-2.jpg" alt="kontur podcast">
     </article>
     <article>
         <p class="podcast">kontur</h3>
@@ -77,7 +77,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">11:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/29214f6b82f68b73c3ed1245cd1ae043.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/georgefloyd-2.jpg" alt="george floyd podcast">
     </article>
     <article>
         <p class="podcast">george floyd</h3>
@@ -91,7 +91,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">12:30</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/76e57dc37ceac22bf02348623497b5ff-scaled.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/hvadialverden-2.jpg" alt="hvad i alverden podcast">
     </article>
     <article>
         <p class="podcast">hvad i alverden</h3>
@@ -105,7 +105,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">13:30</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/712a88c8f4d301bcd856c500c4bf5bca.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/klubpodcast-2.jpg" alt="klub podcadst podcast">
     </article>
     <article>
         <p class="podcast">klub podcast</h3>
@@ -126,7 +126,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">07:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/5ff480057f2537bf4d66b82e592e8639.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/detgodeselskab-2.jpg" alt="det gode selskab podcast">
     </article>
     <article>
         <p class="podcast">det gode selskab</h3>
@@ -140,7 +140,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">08:30</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/80981ad443e4adda320b01394eebc9d3.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/freundschaft-2.jpg" alt="freundschaft podcast">
     </article>
     <article>
         <p class="podcast">freundschaft</h3>
@@ -154,7 +154,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">10:00</div>
 </article>
 <article>
-        <img class="billede" src="https://is2-ssl.mzstatic.com/image/thumb/Podcasts124/v4/52/3c/04/523c0435-e709-f848-2a1a-75fc5289903a/mza_17019287945696966019.jpg/1200x1200bb.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/spejlet-2.jpg" alt="spejlet podcast">
     </article>
     <article>
         <p class="podcast">spejlet</h3>
@@ -168,7 +168,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">11:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/0805a073993d556284e3aacb34853240.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/lydfabrik.jpg" alt="bibelklubben podcast">
     </article>
     <article>
         <p class="podcast">bibelklubben</h3>
@@ -182,7 +182,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">12:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/ddd628611c7a1698785ded87e5d35650.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/kongeriet-2.jpg" alt="kongeriget podcast">
     </article>
     <article>
         <p class="podcast">kongeriget</h3>
@@ -196,7 +196,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">13:30</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/54c77aba2c4a08ecdb3625c5818115bc.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/deungevedverdensende-2.jpg" alt="de unge ved verdens ende podcast">
     </article>
     <article>
         <p class="podcast">de unge ved verdens ende</h3>
@@ -216,7 +216,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">07:00</div>
 </article>
 <article>
-        <img class="billede" src="https://is2-ssl.mzstatic.com/image/thumb/Podcasts124/v4/52/3c/04/523c0435-e709-f848-2a1a-75fc5289903a/mza_17019287945696966019.jpg/1200x1200bb.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/spejlet-2.jpg" alt="spejlet podcast">
     </article>
     <article>
         <p class="podcast">spejlet</h3>
@@ -230,7 +230,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">08:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/b0178eac6a1c08ada53e1c4595750c13.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/drommefanger-2.jpg" alt="drømmefanger podcast">
     </article>
     <article>
         <p class="podcast">drømmefanger</h3>
@@ -244,7 +244,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">09:30</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/d568a7d3db3b4dac853f5a8ac386c4a4.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/dennyeverden-2.jpg" alt="den nye verden podcast">
     </article>
     <article>
         <p class="podcast">den nye verden</h3>
@@ -258,7 +258,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">11:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/2b87e1f686dcea2a1ac707bac620b514.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/aldrigmor-2.jpg" alt="aldrig mor podcast">
     </article>
     <article>
         <p class="podcast">aldrig mor</h3>
@@ -272,7 +272,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">12:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/c269398fcbfd2f74ed611be67f006ab0.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/nattely-2.jpg" alt="nattely podcast">
     </article>
     <article>
         <p class="podcast">nattely</h3>
@@ -286,7 +286,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">13:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/85e42136601642246362d3876f902bcd.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/denyderstegraense-2.jpg" alt="den yderste grænse podcast">
     </article>
     <article>
         <p class="podcast">den yderste grænse</h3>
@@ -306,7 +306,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">07:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/c6cf12a7abc2c0543039a2ed599a5843.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/hvaskerder-2.jpg" alt="hva' sker der podcast">
     </article>
     <article>
         <p class="podcast">hva' sker der?</h3>
@@ -320,7 +320,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">08:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/6726e6cc8d2c2285cb0109570e862248.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/klubrundbordet-2.jpg" alt="klub rundbordet podcast">
     </article>
     <article>
         <p class="podcast">klub rundbordet</h3>
@@ -334,7 +334,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">09:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/ec797d094620d2586ba3a9cb1fab9173.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/gameboys-2.jpg" alt="gameboys podcast">
     </article>
     <article>
         <p class="podcast">gameboys</h3>
@@ -348,7 +348,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">10:30</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/03/81803e60ab2ba3e14604d6b876d04d32.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/vierdata-2.jpg" alt="vi er data podcast">
     </article>
     <article>
         <p class="podcast">vi er data</h3>
@@ -362,7 +362,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">11:30</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/b79b3211419321330ab099788c23f5d5.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/jegplejedeattropåforevigt-2.jpg" alt="jeg plejede at tro på for evigt podcast">
     </article>
     <article>
         <p class="podcast">jeg plejede at tro på for evigt</h3>
@@ -376,7 +376,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">13:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/4aaba0e6826a4fd5db2415b9135ad6b2.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/aloha-2.jpg" alt="aloha! podcast">
     </article>
     <article>
         <p class="podcast">aloha!</h3>
@@ -395,7 +395,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">07:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/026d39d9dd7a3d3fed6e3ce3bd846178.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/dagensnyheder-2.jpg" alt="dagens nyheder podcast">
     </article>
     <article>
         <p class="podcast">dagens nyheder</h3>
@@ -409,7 +409,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">08:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/e094f66e9d1d08b1016d9d87365a332e.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/alisstemmer-2.jpg" alt="alis stemmer podcast">
     </article>
     <article>
         <p class="podcast">alis stemmer</h3>
@@ -423,7 +423,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">09:30</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/cd6a568c99d4342990e7b6b8fba7bc1c.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/aula-2.jpg" alt="aula podcast">
     </article>
     <article>
         <p class="podcast">aula</h3>
@@ -437,7 +437,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">10:30</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/d26ae3feecac38b301ba0fcd37304ed1.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/aktierfornoobies-2.jpg" alt="aktier for noobies podcast">
     </article>
     <article>
         <p class="podcast">aktier for noobies</h3>
@@ -451,7 +451,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">11:30</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/6d8427f81abc23b14f4e058769fdb60a.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/frås-2.jpg" alt="frås podcast">
     </article>
     <article>
         <p class="podcast">frås</h3>
@@ -465,7 +465,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">13:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/d7e90513ba915c229061ae30bcb6deac.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/ifårbornjegfårkemo-2.jpg" alt="i får børn - jeg får kemo podcast">
     </article>
     <article>
         <p class="podcast">i får børn – jeg får kemo</h3>
@@ -483,7 +483,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">07:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/b6b39281185ad3e174387b86935be6e3.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/indsigt-2.jpg" alt="indsigt podcast">
     </article>
     <article>
         <p class="podcast">indsigt</h3>
@@ -497,7 +497,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">08:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/3a4baf83acef9caceda49ff2a6f1910e.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/kollegiekokkenet-2.jpg" alt="kollegiekøkkenet podcast">
     </article>
     <article>
         <p class="podcast">kollegiekøkkenet</h3>
@@ -511,7 +511,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">09:30</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/e797aba886deb77fb75777d029f0835c.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/udråb-2.jpg" alt="udråb podcast">
     </article>
     <article>
         <p class="podcast">udråb</h3>
@@ -525,7 +525,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">11:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/32049b9cc77410a602794f9cc651bd2f.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/spellerk-2.jpg" alt="s, p eller k podcast">
     </article>
     <article>
         <p class="podcast">s, p eller k</h3>
@@ -539,7 +539,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">12:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/dc7fa56773c923296229096f9668b6a0.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/scenelos-2.jpg" alt="sceneløs podcast">
     </article>
     <article>
         <p class="podcast">sceneløs</h3>
@@ -553,7 +553,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">13:30</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/79a29237daeff542c2b597635b39aece.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/dagensnyheder-2.jpg" alt="dagens nyheder podcast">
     </article>
     <article>
         <p class="podcast">dagens nyheder</h3>
@@ -573,7 +573,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">07:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/f48ee088255c97ed7aa2e133d7631335.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/sexhundredetallet-2.jpg" alt="sexhundredetallet podcast">
     </article>
     <article>
         <p class="podcast">sexhundredetallet</h3>
@@ -587,7 +587,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">08:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/d7d11ad07d51a139f395bc0088d8e696.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/allcaps-2.jpg" alt="all caps podcast">
     </article>
     <article>
         <p class="podcast">all caps</h3>
@@ -601,7 +601,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">09:00</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/a1b340e49d5238b196044c77aae76f75.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/talent-2.jpg" alt="talent podcast">
     </article>
     <article>
         <p class="podcast">talent</h3>
@@ -615,7 +615,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">10:30</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/85412bfb204b9c64881109b42440b634.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/tourbussen-2.jpg" alt="tourbussen podcast">
     </article>
     <article>
         <p class="podcast">tourbussen</h3>
@@ -629,7 +629,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">11:30</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/0475ea02b3c6fe20b893210cf3600cd7.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/boblen-2.jpg" alt="boblen podcast">
     </article>
     <article>
         <p class="podcast">boblen</h3>
@@ -643,7 +643,7 @@ endwhile; // End of the loop.
     <div class="tidspunkt">12:30</div>
 </article>
 <article>
-        <img class="billede" src="https://loud.land/wp-content/uploads/2021/04/1733fb2a30ae178db60578d4adb93bf6.jpg" alt="">
+        <img class="billede" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/deltpånettet-2.jpg" alt="delt på nettet podcast">
     </article>
     <article>
         <p class="podcast">delt på nettet</h3>
@@ -917,7 +917,6 @@ content: none;
 
 .beskrivelse{
     grid-column:3/span 1;
-    /* tid+beskrivelse skal ikke vises i mobil */
     display:block;
     font-size:.8rem;
     padding-left:10px;
@@ -939,35 +938,6 @@ content: none;
 
 <script>
 
-// document.addEventListener("DOMContentLoaded", start);
- 
-//  function start(){
-// 	myFunction();
-// }
-
-
-// function myFunction() {
-//   var d = new Date();
-//   let today = d.getDay();
-//   var weekday = new Array(7);
-//   weekday[0] = "Sunday";
-//   weekday[1] = "Monday";
-//   weekday[2] = "Tuesday";
-//   weekday[3] = "Wednesday";
-//   weekday[4] = "Thursday";
-//   weekday[5] = "Friday";
-//   weekday[6] = "Saturday";
-
-//   var n = weekday[d.getDay()];
-//   console.log("Dag:", d.getDay());
-
-//   var dag = document.querySelector("#mandag");
-
-//   toggleContent(dag.nextElementSibling);
-  
-// }
-
-
 const colls = document.getElementsByClassName('collapsible');
 for (const coll of colls) {
   coll.addEventListener('click', function() {
@@ -976,7 +946,6 @@ for (const coll of colls) {
     }
     this.classList.toggle('active');
     toggleContent(this.nextElementSibling);
-// console.log(this);  
 });
 }
 

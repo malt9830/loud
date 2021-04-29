@@ -377,7 +377,7 @@ get_header();
     <div id="become-text">
         <h3>Vil du gerne være podcaster?</h3>
         <h4>I LOUD LAB, får DU mikrofonen, friheden og muligheden for at sammen med andre unge lave jeres helt eget podcast</h4>
-        <a href="http://malthekusk.one/kea/loud/wordpress/loud-lab/" class="custom-button bg-red">JOIN LOUD LAB</a>
+        <a href="http://malthekusk.one/kea/loud/wordpress/lav-en-podcast/" class="custom-button bg-red">JOIN LOUD LAB</a>
     </div>
 </div>
 <div class="bg-cloud">

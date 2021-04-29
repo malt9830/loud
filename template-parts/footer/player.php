@@ -199,7 +199,7 @@
     <div class="bottom-player-content">
         <div class="bottom-player-box bottom-player-left">
             <div class="bottom-player-image">
-                <img src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/spejlet.jpg" alt="logo for podcastet spejlet">
+                <img src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/playerimg.jpeg" alt="logo for podcastet spejlet">
             </div>
             <div class="bottom-player-text">
                 <p>LIGE NU:</p>
