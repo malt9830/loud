@@ -55,7 +55,7 @@
 </style>
 <nav id="site-navigation" class="primary-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary menu', 'twentytwentyone' ); ?>">
     <div class="menu-button-container">
-        <button id="primary-mobile-menu" class="button" aria-controls="primary-menu-list" aria-expanded="false">
+        <button id="primary-mobile-menu" class="button" aria-controls="primary-menu-list" aria-expanded="false" aria-label="burger menu">
             <span class="dropdown-icon open">
                 <?php echo twenty_twenty_one_get_icon_svg( 'ui', 'menu' ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
             </span>
