@@ -11,225 +11,225 @@ get_header();
 ?>
 
 <style>
-	.section-padding {
-		padding: 2rem 0;
-	}
+    .section-padding {
+        padding: 2rem 0;
+    }
 
-	/*--------episodes--------*/
-	section h2 {
-		margin-top: 2rem;
-		margin-bottom: 2rem;
-	}
+    /*--------episodes--------*/
+    section h2 {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
 
-	.text-flex {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		grid-gap: 0.5rem;
-		margin: 0.5rem 1rem;
-	}
+    .text-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        grid-gap: 0.5rem;
+        margin: 0.5rem 1rem;
+    }
 
-	.inline-text {
-		display: inline-block;
-	}
+    .inline-text {
+        display: inline-block;
+    }
 
-	.play-button {
-		text-align: center;
-	}
+    .play-button {
+        text-align: center;
+    }
 
-	.single_indhold {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-	}
+    .single_indhold {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
-	@media (min-width:650px) {
-		.single_article {
-			display: grid;
-			grid-template-columns: 1fr 2fr;
-			grid-gap: 1rem;
-		}
-	}
+    @media (min-width:650px) {
+        .single_article {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 1rem;
+        }
+    }
 
-	.podcasts-media {
-		display: flex;
-		flex-wrap: wrap;
-		place-items: center;
-	}
+    .podcasts-media {
+        display: flex;
+        flex-wrap: wrap;
+        place-items: center;
+    }
 
-	.podcasts-media .custom-button {
-		cursor: pointer;
-		margin: 0.5rem;
-		padding: 0.7rem 1.5rem !important;
-	}
+    .podcasts-media .custom-button {
+        cursor: pointer;
+        margin: 0.5rem;
+        padding: 0.7rem 1.5rem !important;
+    }
 
-	.podcasts-media .fab,
-	.podcasts-media .fas {
-		font-size: 2rem !important;
-		color: white !important;
-		margin: 0 !important;
-	}
+    .podcasts-media .fab,
+    .podcasts-media .fas {
+        font-size: 2rem !important;
+        color: white !important;
+        margin: 0 !important;
+    }
 
-	.single-indhold-bottom .custom-button {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+    .single-indhold-bottom .custom-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-		width: 3rem;
-		height: 3rem;
-	}
+        width: 3rem;
+        height: 3rem;
+    }
 
-	.single-indhold-bottom .custom-button img {
-		width: 2rem;
-		height: 2rem;
-	}
+    .single-indhold-bottom .custom-button img {
+        width: 2rem;
+        height: 2rem;
+    }
 
-	/*--------pod-backgrounds--------*/
+    /*--------pod-backgrounds--------*/
 
-	.bg-spotify {
-		background: #1DB954;
-	}
+    .bg-spotify {
+        background: #1DB954;
+    }
 
-	.bg-apple {
-		background: #D56DFB;
-	}
+    .bg-apple {
+        background: #D56DFB;
+    }
 
-	/*--------episode-formatting--------*/
+    /*--------episode-formatting--------*/
 
-	.play-button {
-		display: none;
-	}
+    .play-button {
+        display: none;
+    }
 
-	.play-mobile {
-		font-size: 2.3rem !important;
-	}
+    .play-mobile {
+        font-size: 2.3rem !important;
+    }
 
-	@media (min-width:650px) {
-		.play-button {
-			display: block;
-		}
+    @media (min-width:650px) {
+        .play-button {
+            display: block;
+        }
 
-		.play-mobile {
-			display: none;
-		}
-	}
+        .play-mobile {
+            display: none;
+        }
+    }
 
 </style>
 
 <section>
-	<a class="custom-button bg-peach" onclick="window.history.back()">Back</a>
-	<main class="single_main">
-		<section id="section-single" class="section-padding">
-			<article class="single_article">
-				<img class="single_billede" src="" alt="">
-				<div class="single_indhold">
-					<div class="single_indhold-top">
-						<h3></h3>
-						<p class="lang_info"></p>
-					</div>
-					<div class="single-indhold-bottom">
-						<h4>Lyt her</h4>
-						<div class="podcasts-media">
-							<div class="custom-button bg-red">
-								<img src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/cropped-radio-loud_2f112a81-1-1.png" alt="loud logo">
-							</div>
-							<div class="custom-button bg-spotify">
-								<i class="fab fa-spotify"></i>
-							</div>
-							<div class="custom-button bg-apple">
-								<i class="fas fa-podcast"></i>
-							</div>
-							<div class="custom-button bg-yellow">
-								<img src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/icon-google-podcasts-01.png" alt="google podcast logo">
-							</div>
-						</div>
-					</div>
-				</div>
-			</article>
-		</section>
-		<section id="section-episodes" class="section-padding">
-			<h2>Alle episoder</h2>
-			<div class="container"></div>
-			<template>
-				<article class="podcasts-article">
-					<div class="top">
-						<img class="image">
-						<div class="text">
-							<h4></h4>
-							<p class="text-desc"></p>
-						</div>
-					</div>
-					<div class="bottom">
-						<div class="text-flex">
-							<p class="text-dato inline-text"></p>
-							<p class="text-time inline-text"></p>
-							<i class="far fa-play-circle play-mobile"></i>
-						</div>
-						<div class="play-button">
-							<i class="far fa-play-circle"></i>
-							<p>Hør podcast</p>
-						</div>
-					</div>
-				</article>
-			</template>
-		</section>
-	</main>
+    <a class="custom-button bg-peach" onclick="window.history.back()">Back</a>
+    <main class="single_main">
+        <section id="section-single" class="section-padding">
+            <article class="single_article">
+                <img class="single_billede" src="" alt="">
+                <div class="single_indhold">
+                    <div class="single_indhold-top">
+                        <h3></h3>
+                        <p class="lang_info"></p>
+                    </div>
+                    <div class="single-indhold-bottom">
+                        <h4>Lyt her</h4>
+                        <div class="podcasts-media">
+                            <div class="custom-button bg-red">
+                                <img src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/cropped-radio-loud_2f112a81-1-1.png" alt="loud logo">
+                            </div>
+                            <div class="custom-button bg-spotify">
+                                <i class="fab fa-spotify"></i>
+                            </div>
+                            <div class="custom-button bg-apple">
+                                <i class="fas fa-podcast"></i>
+                            </div>
+                            <div class="custom-button bg-yellow">
+                                <img src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/icon-google-podcasts-01.png" alt="google podcast logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section id="section-episodes" class="section-padding">
+            <h2>Alle episoder</h2>
+            <div class="container"></div>
+            <template>
+                <article class="podcasts-article">
+                    <div class="top">
+                        <img class="image">
+                        <div class="text">
+                            <h4></h4>
+                            <p class="text-desc"></p>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="text-flex">
+                            <p class="text-dato inline-text"></p>
+                            <p class="text-time inline-text"></p>
+                            <i class="far fa-play-circle play-mobile"></i>
+                        </div>
+                        <div class="play-button">
+                            <i class="far fa-play-circle"></i>
+                            <p>Hør podcast</p>
+                        </div>
+                    </div>
+                </article>
+            </template>
+        </section>
+    </main>
 
 </section>
 
 <script>
-	let podcast;
-	let episoder;
-	let aktuelpodcast = <?php echo get_the_ID() ?>;
+    let podcast;
+    let episoder;
+    let aktuelpodcast = <?php echo get_the_ID() ?>;
 
-	const url = "https://malthekusk.one/kea/loud/wordpress/wp-json/wp/v2/podcast/" + aktuelpodcast;
-	const epiUrl = "https://malthekusk.one/kea/loud/wordpress/wp-json/wp/v2/episode?per_page=100";
-	const container = document.querySelector("#section-episodes .container");
+    const url = "https://malthekusk.one/kea/loud/wordpress/wp-json/wp/v2/podcast/" + aktuelpodcast;
+    const epiUrl = "https://malthekusk.one/kea/loud/wordpress/wp-json/wp/v2/episode?per_page=100";
+    const container = document.querySelector("#section-episodes .container");
 
-	document.addEventListener("DOMContentLoaded", getJson)
+    document.addEventListener("DOMContentLoaded", getJson)
 
-	async function getJson() {
-		const data = await fetch(url);
-		podcast = await data.json();
+    async function getJson() {
+        const data = await fetch(url);
+        podcast = await data.json();
 
-		const data2 = await fetch(epiUrl);
-		episoder = await data2.json();
-		console.log("episoder: ", episoder);
+        const data2 = await fetch(epiUrl);
+        episoder = await data2.json();
+        console.log("episoder: ", episoder);
 
-		visPodcast();
-		visEpisoder();
-	}
+        visPodcast();
+        visEpisoder();
+    }
 
 
-	function visPodcast() {
-		console.log(podcast.title.rendered);
-		document.querySelector(".single_billede").src = podcast.billede.guid;
-		document.querySelector("div h3").innerHTML = podcast.title.rendered;
-		document.querySelector("div .lang_info").innerHTML = podcast.lang;
-	};
+    function visPodcast() {
+        console.log(podcast.title.rendered);
+        document.querySelector(".single_billede").src = podcast.billede.guid;
+        document.querySelector("div h3").innerHTML = podcast.title.rendered;
+        document.querySelector("div .lang_info").innerHTML = podcast.lang;
+    };
 
-	function visEpisoder() {
-		console.log("function hvisEpisoder");
-		let template = document.querySelector("template");
-		episoder.forEach(episode => {
-			console.log("loop kører id :", aktuelpodcast);
-			if (episode.belongs_to_podcast == aktuelpodcast) {
-				console.log("hej");
-				let klon = template.cloneNode(true).content;
+    function visEpisoder() {
+        console.log("function hvisEpisoder");
+        let template = document.querySelector("template");
+        episoder.forEach(episode => {
+            console.log("loop kører id :", aktuelpodcast);
+            if (episode.belongs_to_podcast == aktuelpodcast) {
+                console.log("hej");
+                let klon = template.cloneNode(true).content;
 
-				klon.querySelector("img").src = episode.billede.guid;
-				klon.querySelector("h4").textContent = episode.title.rendered;
-				klon.querySelector(".text-desc").textContent = episode.kort_beskrivelse;
-				klon.querySelector(".text-dato").textContent = episode.dato;
-				klon.querySelector(".text-time").textContent = episode.varighed;
-				klon.querySelector("article").addEventListener("click", () => {
-					location.href = episode.link;
-				});
+                klon.querySelector("img").src = episode.billede.guid;
+                klon.querySelector("h4").innerHTML = episode.title.rendered;
+                klon.querySelector(".text-desc").innerHTML = episode.kort_beskrivelse;
+                klon.querySelector(".text-dato").innerHTML = episode.dato;
+                klon.querySelector(".text-time").innerHTML = episode.varighed;
+                klon.querySelector("article").addEventListener("click", () => {
+                    location.href = episode.link;
+                });
 
-				container.appendChild(klon);
-			}
-		});
-	}
+                container.appendChild(klon);
+            }
+        });
+    }
 
 </script>
 
