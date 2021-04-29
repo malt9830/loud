@@ -8,7 +8,9 @@ Author:			Gruppe 05
 
 /*----------general----------*/
 
-
+html {
+    scroll-behavior: smooth;
+}
 
 img {
     width: 100%;
