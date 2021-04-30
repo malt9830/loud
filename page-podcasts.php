@@ -54,7 +54,6 @@ get_header();
         background: #b0b0b0;
     }
 
-
     /*-----------kategorier-----------*/
 
     #kategorier {
@@ -96,8 +95,6 @@ get_header();
         background: #588B8B !important;
     }
 
-    .custom-button {}
-
     /*-----------mobil-----------*/
 
     @media (min-width: 600px) {
@@ -109,8 +106,6 @@ get_header();
         #kategorier {
             grid-template-columns: 1fr 1fr 1fr 1fr;
         }
-
-
     }
 
 </style>
