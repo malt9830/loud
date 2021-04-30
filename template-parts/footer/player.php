@@ -44,11 +44,11 @@
 
     .bottom-player-left h5 {
         font-family: 'Montserrat', sans-serif;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .bottom-player-left p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .bottom-player-middle {
@@ -57,8 +57,6 @@
         grid-gap: 0.5rem;
         align-items: center;
     }
-
-    .bottom-player-middle>* {}
 
     .bottom-player .fas,
     .bottom-player .far {
@@ -110,22 +108,13 @@
     }
 
 
-    @media (min-width: 1000px) {
-        .bottom-player {
-            padding: 0 1.5rem;
-            transform: translateY(54%);
-        }
-
+    @media (min-width: 800px) {
         .bottom-player-box {
-            margin: 1rem;
+            margin: 0.5rem;
         }
 
         .bottom-player-text {
             display: inline-block;
-        }
-
-        .bottom-player-image {
-            width: 5rem;
         }
 
         .bottom-player .player-timer {
@@ -136,14 +125,9 @@
             display: inline-block;
         }
 
-        .bottom-player .fas,
-        .bottom-player .far {
-            font-size: 3rem;
-        }
-
         .bottom-player-left {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr 2fr;
             grid-gap: 0.5rem;
         }
 
@@ -155,10 +139,6 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 1.3rem;
-        }
-
-        .bottom-player .bar-container {
-            height: 2rem;
         }
 
         .bottom-player .bar-display {
@@ -182,12 +162,6 @@
         margin: 1rem;
     }
 
-    @media (min-width: 1000px) {
-        .bottom-player {
-            transform: translateY(54%);
-        }
-    }
-
     .slide {
         transform: translateY(0%);
         transition-duration: 0.15s;
@@ -204,7 +178,6 @@
             <div class="bottom-player-text">
                 <p>LIGE NU:</p>
                 <h5>Spejlet</h5>
-                <p>Liva Manghezi</p>
             </div>
         </div>
         <div class="bottom-player-box bottom-player-middle">
