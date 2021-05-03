@@ -26,9 +26,6 @@ get_header();
 		margin: 0 !important; 
 	}
 
-	.underrubrik {
-		
-	}
 
 .event-text {
 	padding: 5px 10px 0 3vw !important;
@@ -45,8 +42,11 @@ get_header();
 		max-width: 750px;
 	}
 
-@media (min-width: 600px)
-	margin-left: 7vw;
+@media (min-width: 600px) {
+	#lab-events-all {
+		margin-left: 7vw;
+
+	}
 }
 	.lab-event-green {
 			padding: 10vw;
