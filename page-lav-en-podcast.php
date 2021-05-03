@@ -26,6 +26,15 @@ get_header();
 		margin: 0 !important; 
 	}
 
+.desktop-infografik {
+    background-color: #DADADA;
+}
+
+.desktop-infografik img {
+    max-width: 1200px; 
+
+}
+
 
 .event-text {
 	padding: 5px 10px 0 3vw !important;
@@ -36,6 +45,7 @@ get_header();
 	p .event-text {
 	margin-bottom: 0 !important;
 	margin-block-end: 0;
+    margin-top: 5px;
 }
 
 	#lab-events-all {
@@ -54,7 +64,6 @@ get_header();
 
 	#section-podcasts {
     max-width: 1140px !important;
-    margin: 0 1rem !important;
 }
 
     /* responsiv infografik - byt mellem to billeder i mobile vs. desktop	 */
