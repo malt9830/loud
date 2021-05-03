@@ -80,6 +80,10 @@ get_header();
         }
     }
 
+    .wp-block-columns .wp-block-column>* {
+        margin-bottom: 0 !important;
+    }
+
 </style>
 
 <template>
@@ -96,7 +100,6 @@ get_header();
                 <i class="far fa-play-circle"></i>
                 <p>Hør seneste podcast</p>
             </div>
-
         </div>
     </article>
 </template>

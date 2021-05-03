@@ -8,18 +8,84 @@
 get_header();
 
 ?>
+
+<style>
+    /*-----------popu podcast-----------*/
+
+    #popu_podcast {
+        display: flex;
+        grid-gap: 20px;
+        padding: 10px 0px;
+        margin-top: 0;
+
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+    }
+
+    .pod_article {
+        flex-grow: 1;
+
+        flex-basis: 50%;
+        flex-shrink: 0;
+        scroll-snap-align: center;
+    }
+
+    .wp-block-columns .wp-block-column>* {
+        margin-top: 0;
+    }
+
+    .pod_billede {
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar {
+        width: 4px;
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background: #eeeeee;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: #b0b0b0;
+    }
+
+    /*-----------mobil-----------*/
+
+    @media (min-width: 600px) {
+
+        .pod_article {
+            flex-basis: 20%;
+        }
+
+        #kategorier {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+
+    }
+
+</style>
+
+
 <section>
     <h1></h1>
 </section>
-<section id="popu_podcast">
+<section>
     <h2>Mest populære</h2>
-</section>
-<section id="section-podcasts">
-    <h2>Alle</h2>
-    <div class="container"></div>
+    <section id="popu_podcast">
+    </section>
+    <section id="section-podcasts">
+        <h2>Alle</h2>
+        <div class="container"></div>
+    </section>
 </section>
 
-<template>
+<template id="template1">
     <article>
         <div class="top">
             <img class="image">
@@ -33,6 +99,16 @@ get_header();
                 <i class="far fa-play-circle"></i>
                 <p>Hør seneste podcast</p>
             </div>
+        </div>
+    </article>
+</template>
+
+<template id="template2">
+    <article class="pod_article">
+        <img class="pod_billede" src="" alt="">
+        <div class="pod_indhold">
+            <h3></h3>
+            <p class="kort_info"></p>
         </div>
     </article>
 </template>
@@ -63,6 +139,7 @@ get_header();
 
         visTitel();
         visPodcasts();
+        visPodcasts2();
     }
 
     function visTitel() {
@@ -71,19 +148,23 @@ get_header();
         categories.forEach(category => {
             if (category.slug == catID) {
                 console.log("looping categories");
-                document.querySelector("h1").textContent = category.name;
+                document.querySelector("h1").innerHTML = category.name;
             }
         })
     }
 
     function visPodcasts() {
-        let template = document.querySelector("template");
+        let template = document.querySelector("#template1");
         let container = document.querySelector("#section-podcasts .container");
         let filter = "alle";
 
+        var alfaPodcasts = podcasts.slice().sort((a, b) => a.title.rendered.localeCompare(b.title.rendered));
+
+        console.log("a-z: ", alfaPodcasts);
+
         console.log(catID);
 
-        podcasts.forEach(podcast => {
+        alfaPodcasts.forEach(podcast => {
             if (podcast.kategori == catID || filter == catID) {
                 let clone = template.cloneNode(true).content; //Her klones template og udfyldes  med data fra json
 
@@ -95,6 +176,33 @@ get_header();
                     location.href = podcast.link;
                 });
                 container.appendChild(clone); //Klonerne tilføres til DOM
+            }
+        });
+    }
+
+    function visPodcasts2() {
+        let template2 = document.querySelector("#template2");
+        let container2 = document.querySelector("#popu_podcast");
+        let filter = "alle";
+
+        //Lav et nyt array sorteret ud fra et tal i arrayets objekter
+        var popuPodcasts = podcasts.slice().sort(function(a, b) {
+            return parseInt(b.streaming, 10) - parseInt(a.streaming, 10)
+        });
+
+        console.log("pop: ", popuPodcasts);
+
+        popuPodcasts.forEach(podcast2 => {
+            if (podcast2.kategori == catID || filter == catID) {
+                let clone2 = template2.cloneNode(true).content; //Her klones template og udfyldes  med data fra json
+
+                clone2.querySelector("img").src = podcast2.billede.guid;
+                clone2.querySelector("div h3").innerHTML = podcast2.title.rendered;
+                clone2.querySelector("div .kort_info").innerHTML = podcast2.kort;
+                clone2.querySelector(".pod_article").addEventListener("click", () => {
+                    location.href = podcast2.link;
+                });
+                container2.appendChild(clone2); //Klonerne tilføres til DOM
             }
         });
     }

@@ -63,22 +63,30 @@ get_header();
     }
 
     .podcasts-media .custom-button {
-        display: inline-block;
         cursor: pointer;
-        margin: 1rem !important;
+        margin: 0.5rem;
         padding: 0.7rem 1.5rem !important;
     }
 
     .podcasts-media .fab,
     .podcasts-media .fas {
-        font-size: 2.5rem !important;
+        font-size: 2rem !important;
         color: white !important;
         margin: 0 !important;
     }
 
-    .podcasts-media img {
-        height: 40px;
-        width: 40px;
+    .single-indhold-bottom .custom-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .single-indhold-bottom .custom-button img {
+        width: 2rem;
+        height: 2rem;
     }
 
     /*--------pod-backgrounds--------*/
@@ -202,10 +210,10 @@ get_header();
 
     function visEpisode() {
         document.querySelector(".single_billede").src = episode.billede.guid;
-        document.querySelector(".single-indhold-top h3").textContent = episode.title.rendered;
-        document.querySelector(".text-desc").textContent = episode.lang_beskrivelse;
-        document.querySelector(".text-dato").textContent = episode.dato;
-        document.querySelector(".text-time").textContent = episode.varighed;
+        document.querySelector(".single-indhold-top h3").innerHTML = episode.title.rendered;
+        document.querySelector(".text-desc").innerHTML = episode.lang_beskrivelse;
+        document.querySelector(".text-dato").innerHTML = episode.dato;
+        document.querySelector(".text-time").innerHTML = episode.varighed;
     };
 
     function visAndreEpisoder() {
@@ -219,10 +227,10 @@ get_header();
                 let klon = template.cloneNode(true).content;
 
                 klon.querySelector("img").src = andenEpisode.billede.guid;
-                klon.querySelector("h4").textContent = andenEpisode.title.rendered;
-                klon.querySelector(".text-desc").textContent = andenEpisode.kort_beskrivelse;
-                klon.querySelector(".text-dato").textContent = andenEpisode.dato;
-                klon.querySelector(".text-time").textContent = andenEpisode.varighed;
+                klon.querySelector("h4").innerHTML = andenEpisode.title.rendered;
+                klon.querySelector(".text-desc").innerHTML = andenEpisode.kort_beskrivelse;
+                klon.querySelector(".text-dato").innerHTML = andenEpisode.dato;
+                klon.querySelector(".text-time").innerHTML = andenEpisode.varighed;
                 klon.querySelector("article").addEventListener("click", () => {
                     location.href = andenEpisode.link;
                 });

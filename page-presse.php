@@ -9,9 +9,10 @@
         text-decoration: none !important;
     }
 
-    .elementor a{
-        color:white;
+    .elementor a {
+        color: white;
     }
+
 </style>
 
 

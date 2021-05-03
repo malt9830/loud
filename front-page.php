@@ -17,68 +17,63 @@ get_header();
 
     .site-main>* {
         max-width: none !important;
+        margin: 0 !important;
     }
 
     /*------------landing------------*/
 
-    #landing-full {
-        padding-top: 0;
-        margin-top: 0;
-        margin-bottom: -29vw;
-    }
-
     #landing {
-        width: 100%;
-        height: 80vh;
+        position: relative;
     }
 
-    #splash {
-        background-image: url(http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/splash.png);
-        background-size: cover;
-        background-position: 50% 50%;
-        max-width: none;
-        width: 100%;
-        height: 80vh;
+    #landing-full {
+        margin: 0 !important;
+    }
+
+    #splash-desktop {
+        display: none;
     }
 
     #landing-text {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-
-        /*box*/
-        background: rgba(100, 10, 10, 0.7);
-        width: 300px;
-        height: 350px;
-        border-radius: 30px;
-        color: white;
+        transform: translateX(-50%);
+        width: 80vw !important;
     }
 
-    #landing-text-top h1 {
-        margin-bottom: 3rem;
+    #landing-text .custom-button {
+        width: 100% !important;
+        margin: 1rem 0 !important;
     }
 
-    @media (max-width: 600px) {
-        #splash {
-            width: 100%;
-            height: 75vh;
+    @media (min-width: 900px) {
+        #splash-mobile {
+            display: none;
         }
-    }
 
-    @media (min-width: 600px) {
+        #splash-desktop {
+            display: block;
+        }
+
         #landing-text {
-            width: 505px !important;
-            height: 270px !important;
+            top: 50%;
+            left: 55%;
+            transform: translate(-25%, -50%);
+            width: 30rem !important;
+        }
+
+        #landing-text .custom-button {
+            font-size: 2rem !important;
         }
     }
 
     /*------------feed------------*/
 
     #section-feed .container-feed {
-        display: grid;
-        grid-gap: 1rem;
+        display: flex;
+        overflow-x: scroll;
+        white-space: nowrap;
     }
 
     #section-feed .custom-button {
@@ -90,18 +85,21 @@ get_header();
     }
 
     iframe {
-        margin: 0 auto !important;
-    }
-
-    @media (min-width: 700px) {
-        #section-feed .container-feed {
-            grid-template-columns: repeat(2, 1fr);
-        }
+        margin: 0.5rem !important;
+        min-width: 18rem !important;
     }
 
     @media (min-width: 1050px) {
         #section-feed .container-feed {
+            display: grid;
             grid-template-columns: repeat(3, 1fr);
+            overflow-x: visible;
+            white-space: normal;
+            grid-gap: 1rem;
+        }
+
+        iframe {
+            margin: 0 !important;
         }
     }
 
@@ -131,8 +129,6 @@ get_header();
         margin-bottom: 2.5rem;
     }
 
-
-
     /*------------partners------------*/
 
     #section-partners p {
@@ -161,20 +157,49 @@ get_header();
         font-size: 30px;
     }
 
+    #become-background {
+        height: 100vh;
+        width: 100%;
+        background: url(http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/lydfabrik.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    @media (min-width: 650px) {
+        #become-background {
+            height: 50vh;
+        }
+    }
+
+    #become-text {
+        position: absolute;
+        text-align: center;
+        left: 50%;
+        top: 45%;
+        transform: translateX(-50%);
+        min-width: 20rem;
+        max-width: 35rem;
+    }
+
+    #become-text h3 {
+        font-size: 2rem !important;
+    }
+
+    #become-text .custom-button {
+        margin-top: 3rem;
+    }
+
 </style>
 
 <div id="landing-full">
     <div id="landing">
-        <div id="splash">
-        </div>
+        <img id="splash-desktop" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/loud_splash_new_web_2.png" alt="splash image for desktop">
+        <img id="splash-mobile" src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/loud_splash_new_mobile.png" alt="splash image for mobile">
         <div id="landing-text">
-            <div id="landing-text-top">
-                <h1>LOUD</h1>
-            </div>
-            <div id="landing-text-bottom">
-                <a class="custom-button bg-red">LYT LIVE</a>
-                <a class="custom-button bg-peach" href="/kea/loud/wordpress/podcasts/">HØR PODCASTS</a>
-            </div>
+            <a href="/kea/loud/wordpress/podcasts" class="custom-button bg-peach">LYT LIVE</a>
+            <a class="custom-button bg-yellow" href="/kea/loud/wordpress/podcasts/">PODCASTS</a>
         </div>
     </div>
 </div>
@@ -187,7 +212,7 @@ get_header();
         <h2>LOUDs feed</h2>
         <div class="container-feed">
             <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CN40bYJhWqR/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-                <div style="padding:16px;"> <a href="https://www.instagram.com/p/CN40bYJhWqR/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+                <div style="padding:16px;"> <a rel="noopener" href="https://www.instagram.com/p/CN40bYJhWqR/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
                         <div style=" display: flex; flex-direction: row; align-items: center;">
                             <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div>
                             <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
@@ -230,11 +255,11 @@ get_header();
                             <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div>
                         </div>
                     </a>
-                    <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CN40bYJhWqR/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by LOUD Radio 📲 Podcast (@radio.louddk)</a></p>
+                    <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a rel="noopener" href="https://www.instagram.com/p/CN40bYJhWqR/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by LOUD Radio 📲 Podcast (@radio.louddk)</a></p>
                 </div>
             </blockquote>
             <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CNz0xAwFlbd/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-                <div style="padding:16px;"> <a href="https://www.instagram.com/p/CNz0xAwFlbd/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+                <div style="padding:16px;"> <a rel="noopener" href="https://www.instagram.com/p/CNz0xAwFlbd/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
                         <div style=" display: flex; flex-direction: row; align-items: center;">
                             <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div>
                             <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
@@ -277,11 +302,11 @@ get_header();
                             <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div>
                         </div>
                     </a>
-                    <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CNz0xAwFlbd/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by LOUD Radio 📲 Podcast (@radio.louddk)</a></p>
+                    <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a rel="noopener" href="https://www.instagram.com/p/CNz0xAwFlbd/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by LOUD Radio 📲 Podcast (@radio.louddk)</a></p>
                 </div>
             </blockquote>
             <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CNwtjtqDQ7T/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-                <div style="padding:16px;"> <a href="https://www.instagram.com/p/CNwtjtqDQ7T/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+                <div style="padding:16px;"> <a rel="noopener" href="https://www.instagram.com/p/CNwtjtqDQ7T/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
                         <div style=" display: flex; flex-direction: row; align-items: center;">
                             <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div>
                             <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
@@ -324,7 +349,7 @@ get_header();
                             <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div>
                         </div>
                     </a>
-                    <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CNwtjtqDQ7T/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by LOUD Radio 📲 Podcast (@radio.louddk)</a></p>
+                    <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a rel="noopener" href="https://www.instagram.com/p/CNwtjtqDQ7T/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by LOUD Radio 📲 Podcast (@radio.louddk)</a></p>
                 </div>
             </blockquote>
             <script async src="//www.instagram.com/embed.js"></script>
@@ -347,6 +372,13 @@ get_header();
             <img src="http://malthekusk.one/kea/loud/wordpress/wp-content/uploads/2021/04/infografik2.png" alt="hvilken podcast skal du vælge">
         </div>
     </section>
+</div>
+<div id="become-background">
+    <div id="become-text">
+        <h3>Vil du gerne være podcaster?</h3>
+        <h4>I LOUD LAB, får DU mikrofonen, friheden og muligheden for at sammen med andre unge lave jeres helt eget podcast</h4>
+        <a href="http://malthekusk.one/kea/loud/wordpress/lav-en-podcast/" class="custom-button bg-red">JOIN LOUD LAB</a>
+    </div>
 </div>
 <div class="bg-cloud">
     <section id="section-partners" class="section-padding">

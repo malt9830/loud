@@ -58,22 +58,30 @@ get_header();
     }
 
     .podcasts-media .custom-button {
-        display: inline-block;
         cursor: pointer;
-        margin: 1rem !important;
+        margin: 0.5rem;
         padding: 0.7rem 1.5rem !important;
     }
 
     .podcasts-media .fab,
     .podcasts-media .fas {
-        font-size: 2.5rem !important;
+        font-size: 2rem !important;
         color: white !important;
         margin: 0 !important;
     }
 
-    .podcasts-media img {
-        height: 40px;
-        width: 40px;
+    .single-indhold-bottom .custom-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .single-indhold-bottom .custom-button img {
+        width: 2rem;
+        height: 2rem;
     }
 
     /*--------pod-backgrounds--------*/
@@ -210,10 +218,10 @@ get_header();
                 let klon = template.cloneNode(true).content;
 
                 klon.querySelector("img").src = episode.billede.guid;
-                klon.querySelector("h4").textContent = episode.title.rendered;
-                klon.querySelector(".text-desc").textContent = episode.kort_beskrivelse;
-                klon.querySelector(".text-dato").textContent = episode.dato;
-                klon.querySelector(".text-time").textContent = episode.varighed;
+                klon.querySelector("h4").innerHTML = episode.title.rendered;
+                klon.querySelector(".text-desc").innerHTML = episode.kort_beskrivelse;
+                klon.querySelector(".text-dato").innerHTML = episode.dato;
+                klon.querySelector(".text-time").innerHTML = episode.varighed;
                 klon.querySelector("article").addEventListener("click", () => {
                     location.href = episode.link;
                 });

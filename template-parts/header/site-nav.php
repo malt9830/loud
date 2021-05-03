@@ -27,8 +27,8 @@
 
     .open svg,
     .close svg {
-        width: 5rem;
-        height: 5rem;
+        width: 48px !important;
+        height: 48px !important;
         color: white;
     }
 
@@ -37,17 +37,25 @@
         padding-top: 0;
     }
 
+    .menu-button-container #primary-mobile-menu .dropdown-icon.open .svg-icon {
+        top: 0 !important;
+    }
+
 
     @media only screen and (max-width: 481px) {
         .admin-bar .has-logo.has-title-and-tagline .primary-navigation>.primary-menu-container {
             top: 5rem;
+        }
+
+        body:not(.primary-navigation-open) .site-header.has-logo.has-title-and-tagline .menu-button-container {
+            margin-top: 0 !important;
         }
     }
 
 </style>
 <nav id="site-navigation" class="primary-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary menu', 'twentytwentyone' ); ?>">
     <div class="menu-button-container">
-        <button id="primary-mobile-menu" class="button" aria-controls="primary-menu-list" aria-expanded="false">
+        <button id="primary-mobile-menu" class="button" aria-controls="primary-menu-list" aria-expanded="false" aria-label="burger menu">
             <span class="dropdown-icon open">
                 <?php echo twenty_twenty_one_get_icon_svg( 'ui', 'menu' ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
             </span>
